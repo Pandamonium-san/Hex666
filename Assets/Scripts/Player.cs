@@ -1,29 +1,36 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Player : MonoBehaviour {
-
+public class Player : MonoBehaviour
+{
     public float WalkSpeed { get; set; }
     public float RunSpeed { get; set; }
 
-    float Speed;
+    enum Dir { D, DR, R, U, UR }
+    Dir fDir = Dir.R;
+    bool flipHorizontal = false;
 
     BoxCollider2D boxCollider;
     new Rigidbody2D rigidbody2D;
 
-	// Use this for initialization
-	void Start () 
+    public Vector3 triggerDir;
+    public float triggerDistance;
+    float Speed;
+
+    // Use this for initialization
+    void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
         Speed = 500f;
-	}
-	
-	// Update is called once per frame
-	void Update () 
+    }
+
+    // Update is called once per frame
+    void Update()
     {
         Movement();
-        if(Input.GetKey)
-	}
+        if (Input.GetKeyUp("z"))
+            Examine();
+    }
 
     void Movement()
     {
@@ -31,8 +38,11 @@ public class Player : MonoBehaviour {
         float vertical = VerticalMovement();
         Vector3 movement = new Vector3(horizontal, vertical, 0);
         rigidbody2D.velocity = movement;
-        if (Input.GetKey("z"))
-            Examine();
+        if (movement != Vector3.zero)
+        {
+            UpdateDirection(movement);
+            triggerDir = movement.normalized;
+        }
     }
 
     float HorizontalMovement()
@@ -56,9 +66,37 @@ public class Player : MonoBehaviour {
         vertical *= Speed * Time.deltaTime;
         return vertical;
     }
+    void UpdateDirection(Vector3 movement)
+    {
+        if (movement.x > 0)
+            flipHorizontal = false;
+        else if (movement.x < 0)
+            flipHorizontal = true;
+        else
+        {
+            if (movement.y > 0)
+                fDir = Dir.U;
+            else if (movement.y < 0)
+                fDir = Dir.D;
+            else
+                fDir = Dir.R;
+            return;
+        }
+        if (movement.y > 0)
+            fDir = Dir.UR;
+        else if (movement.y < 0)
+            fDir = Dir.DR;
+    }
 
     void Examine()
     {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, triggerDir, triggerDistance, 1 << 9);
+        if (hit.collider != null)
+        {
+            Debug.Log(hit.collider.name);
+            Camera.main.cullingMask = ~(1 << 10);
+            Destroy(hit.transform.gameObject);
+        }
 
     }
 

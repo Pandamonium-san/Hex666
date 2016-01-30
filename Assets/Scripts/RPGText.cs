@@ -7,12 +7,12 @@ public class RPGText : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         StartText();
-	}
+        StartCoroutine(TextScroll());
+    }
 	
     public void StartText()
     {
         Debug.Log("test");
-        StartCoroutine(TextScroll());
     }
 
     public IEnumerator TextScroll()
