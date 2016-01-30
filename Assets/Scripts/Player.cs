@@ -6,9 +6,19 @@ public class Player : MonoBehaviour
     public float WalkSpeed { get; set; }
     public float RunSpeed { get; set; }
 
+    public int Mushroom = 0;
+    public int Medallion = 0;
+    public int Bone = 0;
+    public int Flask = 0;
+    public int CatOneLight = 0;
+    public int CatTwoLight = 0;
+
     enum Dir { D, DR, R, U, UR }
     Dir fDir = Dir.R;
     bool flipHorizontal = false;
+
+    enum State { Moving, Interacting }
+    State state = State.Moving;
 
     BoxCollider2D boxCollider;
     new Rigidbody2D rigidbody2D;
@@ -27,9 +37,18 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Movement();
-        if (Input.GetKeyUp("z"))
-            Examine();
+        switch (state)
+        {
+            case State.Moving:
+                Movement();
+                if (Input.GetKeyUp("z"))
+                    Examine();
+                break;
+            case State.Interacting:
+                break;
+            default:
+                break;
+        }
     }
 
     void Movement()
@@ -94,8 +113,8 @@ public class Player : MonoBehaviour
         if (hit.collider != null)
         {
             Debug.Log(hit.collider.name);
-            Camera.main.cullingMask = ~(1 << 10);
-            Destroy(hit.transform.gameObject);
+            EventTrigger et = hit.transform.GetComponent<EventTrigger>();
+            et.Trigger(this);
         }
 
     }
