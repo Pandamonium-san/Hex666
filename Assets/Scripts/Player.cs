@@ -16,12 +16,12 @@ public class Player : MonoBehaviour
     enum Dir { D, DR, R, U, UR }
     Dir fDir = Dir.R;
     bool flipHorizontal = false;
-
-    enum State { Moving, Interacting }
-    State state = State.Moving;
+    public enum State { Moving, Interacting }
+    public State state = State.Moving;
 
     BoxCollider2D boxCollider;
     new Rigidbody2D rigidbody2D;
+    GameManager gm;
 
     public Vector3 triggerDir;
     public float triggerDistance;
@@ -30,6 +30,7 @@ public class Player : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        gm = FindObjectOfType<GameManager>();
         rigidbody2D = GetComponent<Rigidbody2D>();
         Speed = 500f;
     }
@@ -41,10 +42,13 @@ public class Player : MonoBehaviour
         {
             case State.Moving:
                 Movement();
-                if (Input.GetKeyUp("z"))
+                if (Input.GetKeyUp("e"))
                     Examine();
                 break;
             case State.Interacting:
+                rigidbody2D.velocity = Vector2.zero;
+                if (Input.GetKeyUp("e"))
+                    gm.PlayNextMessage();
                 break;
             default:
                 break;

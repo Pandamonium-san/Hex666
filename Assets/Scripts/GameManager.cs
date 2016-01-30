@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
-public class UIManager : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
     public Canvas canvas;
     public Transform dialogue;
@@ -12,10 +12,13 @@ public class UIManager : MonoBehaviour
     public Vector3 posLeft, posRight;
 
     List<GameObject> instAvatars;
+    Queue<string> msgQueue;
+    Player player;
     GameObject curLeft, curRight;
 
     void Start()
     {
+        player = FindObjectOfType<Player>();
         instAvatars = new List<GameObject>();
         foreach (GameObject av in avatars)
         {
@@ -49,15 +52,20 @@ public class UIManager : MonoBehaviour
         {
             ShowAvatar(2, true);
         }
-        if (Input.GetKeyDown("4"))
+        if (Input.GetKeyDown("5"))
         {
             ShowAvatar(2, false);
         }
+        if (Input.GetKeyDown("6"))
+        {
+            HideDialogue();
+        }
     }
 
-    void PlayMessage(string message)
+    public void PlayMessage(string message)
     {
         dialogue.gameObject.SetActive(true);
+        player.state = Player.State.Interacting;
         TextScroll txScr = textBox.GetComponent<TextScroll>();
         if (!txScr.finished)
         {
@@ -68,7 +76,26 @@ public class UIManager : MonoBehaviour
         txScr.StartTextScroll();
     }
 
-    void ShowAvatar(int index, bool left)
+    public void PlayMessage(Queue<string> messages)
+    {
+        dialogue.gameObject.SetActive(true);
+        player.state = Player.State.Interacting;
+        msgQueue = messages;
+        PlayNextMessage();
+    }
+
+    public void PlayNextMessage()
+    {
+        if (!textBox.GetComponent<TextScroll>().finished)
+            return;
+        if (msgQueue.Count <= 0)
+        {
+            HideDialogue();
+        }
+        PlayMessage(msgQueue.Dequeue());
+    }
+
+    public void ShowAvatar(int index, bool left)
     {
         Debug.Log("showing" + index);
         GameObject av = instAvatars[index];
@@ -92,7 +119,7 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    void HideAvatar(bool left)
+    public void HideAvatar(bool left)
     {
         Debug.Log("hiding");
         if (left)
@@ -101,9 +128,15 @@ public class UIManager : MonoBehaviour
             curRight.SetActive(false);
     }
 
-    void DisableUI()
+    public void HideDialogue()
     {
         dialogue.gameObject.SetActive(false);
+        textBox.GetComponent<TextScroll>().finished = true;
+        foreach (var av in instAvatars)
+        {
+            av.SetActive(false);
+        }
+        player.state = Player.State.Moving;
     }
 
 
