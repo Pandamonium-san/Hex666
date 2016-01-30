@@ -110,6 +110,7 @@ public class Player : MonoBehaviour
     void Examine()
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, triggerDir, triggerDistance, 1 << 9);
+        Debug.Log("examine");
         if (hit.collider != null)
         {
             Debug.Log(hit.collider.name);
