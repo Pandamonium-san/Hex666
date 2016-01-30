@@ -1,0 +1,716 @@
+fileFormatVersion: 2
+guid: 042027f8f88543a448874d8f11948645
+timeCreated: 1454193426
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Myhn_angry_0
+    21300002: Myhn_angry_1
+    21300004: Myhn_angry_2
+    21300006: Myhn_angry_3
+    21300008: Myhn_angry_4
+    21300010: Myhn_angry_5
+    21300012: Myhn_angry_6
+    21300014: Myhn_angry_7
+    21300016: Myhn_angry_8
+    21300018: Myhn_angry_9
+    21300020: Myhn_angry_10
+    21300022: Myhn_angry_11
+    21300024: Myhn_angry_12
+    21300026: Myhn_angry_13
+    21300028: Myhn_angry_14
+    21300030: Myhn_angry_15
+    21300032: Myhn_angry_16
+    21300034: Myhn_angry_17
+    21300036: Myhn_angry_18
+    21300038: Myhn_angry_19
+    21300040: Myhn_angry_20
+    21300042: Myhn_angry_21
+    21300044: Myhn_angry_22
+    21300046: Myhn_angry_23
+    21300048: Myhn_angry_24
+    21300050: Myhn_angry_25
+    21300052: Myhn_angry_26
+    21300054: Myhn_angry_27
+    21300056: Myhn_angry_28
+    21300058: Myhn_angry_29
+    21300060: Myhn_angry_30
+    21300062: Myhn_angry_31
+    21300064: Myhn_angry_32
+    21300066: Myhn_angry_33
+    21300068: Myhn_angry_34
+    21300070: Myhn_angry_35
+    21300072: Myhn_angry_36
+    21300074: Myhn_angry_37
+    21300076: Myhn_angry_38
+    21300078: Myhn_angry_39
+    21300080: Myhn_angry_40
+    21300082: Myhn_angry_41
+    21300084: Myhn_angry_42
+    21300086: Myhn_angry_43
+    21300088: Myhn_angry_44
+    21300090: Myhn_angry_45
+    21300092: Myhn_angry_46
+    21300094: Myhn_angry_47
+    21300096: Myhn_angry_48
+    21300098: Myhn_angry_49
+    21300100: Myhn_angry_50
+    21300102: Myhn_angry_51
+    21300104: Myhn_angry_52
+    21300106: Myhn_angry_53
+    21300108: Myhn_angry_54
+    21300110: Myhn_angry_55
+    21300112: Myhn_angry_56
+    21300114: Myhn_angry_57
+    21300116: Myhn_angry_58
+    21300118: Myhn_angry_59
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 8192
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Myhn_angry_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2555
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_1
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 2555
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_2
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 2555
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_3
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 2555
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_4
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 2555
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_5
+      rect:
+        serializedVersion: 2
+        x: 1756
+        y: 2555
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_6
+      rect:
+        serializedVersion: 2
+        x: 2107
+        y: 2555
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_7
+      rect:
+        serializedVersion: 2
+        x: 2458
+        y: 2555
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_8
+      rect:
+        serializedVersion: 2
+        x: 2809
+        y: 2555
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_9
+      rect:
+        serializedVersion: 2
+        x: 3160
+        y: 2555
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_10
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2054
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_11
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 2054
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_12
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 2054
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_13
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 2054
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_14
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 2054
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_15
+      rect:
+        serializedVersion: 2
+        x: 1756
+        y: 2054
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_16
+      rect:
+        serializedVersion: 2
+        x: 2107
+        y: 2054
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_17
+      rect:
+        serializedVersion: 2
+        x: 2458
+        y: 2054
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_18
+      rect:
+        serializedVersion: 2
+        x: 2809
+        y: 2054
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_19
+      rect:
+        serializedVersion: 2
+        x: 3160
+        y: 2054
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_20
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1553
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_21
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 1553
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_22
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 1553
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_23
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 1553
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_24
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 1553
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_25
+      rect:
+        serializedVersion: 2
+        x: 1756
+        y: 1553
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_26
+      rect:
+        serializedVersion: 2
+        x: 2107
+        y: 1553
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_27
+      rect:
+        serializedVersion: 2
+        x: 2458
+        y: 1553
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_28
+      rect:
+        serializedVersion: 2
+        x: 2809
+        y: 1553
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_29
+      rect:
+        serializedVersion: 2
+        x: 3160
+        y: 1553
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_30
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1052
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_31
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 1052
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_32
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 1052
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_33
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 1052
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_34
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 1052
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_35
+      rect:
+        serializedVersion: 2
+        x: 1756
+        y: 1052
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_36
+      rect:
+        serializedVersion: 2
+        x: 2107
+        y: 1052
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_37
+      rect:
+        serializedVersion: 2
+        x: 2458
+        y: 1052
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_38
+      rect:
+        serializedVersion: 2
+        x: 2809
+        y: 1052
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_39
+      rect:
+        serializedVersion: 2
+        x: 3160
+        y: 1052
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_40
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 551
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_41
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 551
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_42
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 551
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_43
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 551
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_44
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 551
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_45
+      rect:
+        serializedVersion: 2
+        x: 1756
+        y: 551
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_46
+      rect:
+        serializedVersion: 2
+        x: 2107
+        y: 551
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_47
+      rect:
+        serializedVersion: 2
+        x: 2458
+        y: 551
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_48
+      rect:
+        serializedVersion: 2
+        x: 2809
+        y: 551
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_49
+      rect:
+        serializedVersion: 2
+        x: 3160
+        y: 551
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_50
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 50
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_51
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 50
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_52
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 50
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_53
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 50
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_54
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 50
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_55
+      rect:
+        serializedVersion: 2
+        x: 1756
+        y: 50
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_56
+      rect:
+        serializedVersion: 2
+        x: 2107
+        y: 50
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_57
+      rect:
+        serializedVersion: 2
+        x: 2458
+        y: 50
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_58
+      rect:
+        serializedVersion: 2
+        x: 2809
+        y: 50
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_angry_59
+      rect:
+        serializedVersion: 2
+        x: 3160
+        y: 50
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

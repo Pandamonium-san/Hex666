@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
             GameObject newAv = Instantiate(av);
             instAvatars.Add(newAv);
             newAv.transform.parent = canvas.transform;
-            newAv.SetActive(false);
+            //newAv.SetActive(false);
         }
     }
 
@@ -36,21 +36,16 @@ public class GameManager : MonoBehaviour
             PlayMessage("hello this is the end of the beginning have you tried my new however what if you didn't but yes in the home");
         if (Input.GetKeyDown("2"))
         {
-            if (curLeft != instAvatars[1])
-                ShowAvatar(1, true);
-            else
-                HideAvatar(true);
+            ShowAvatar(0, true);
+            curLeft.GetComponent<Animator>().SetTrigger("Happy");
         }
         if (Input.GetKeyDown("3"))
         {
-            if (curRight != instAvatars[0])
-                ShowAvatar(0, false);
-            else
-                HideAvatar(false);
+            curLeft.GetComponent<Animator>().SetTrigger("Angry");
         }
         if(Input.GetKeyDown("4"))
         {
-            ShowAvatar(2, true);
+            curLeft.GetComponent<Animator>().SetTrigger("Idle");
         }
         if (Input.GetKeyDown("5"))
         {
@@ -99,7 +94,6 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("showing" + index);
         GameObject av = instAvatars[index];
-        av.SetActive(true);
         if (left)
         {
             if (curLeft)
@@ -117,6 +111,7 @@ public class GameManager : MonoBehaviour
             av.transform.localPosition = posRight;
             curRight = av;
         }
+        av.SetActive(true);
     }
 
     public void HideAvatar(bool left)
