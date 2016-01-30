@@ -1,0 +1,716 @@
+fileFormatVersion: 2
+guid: 2f17fbadfbcd52445a69f5ff6d980bd2
+timeCreated: 1454190398
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Myhn_happy_0
+    21300002: Myhn_happy_1
+    21300004: Myhn_happy_2
+    21300006: Myhn_happy_3
+    21300008: Myhn_happy_4
+    21300010: Myhn_happy_5
+    21300012: Myhn_happy_6
+    21300014: Myhn_happy_7
+    21300016: Myhn_happy_8
+    21300018: Myhn_happy_9
+    21300020: Myhn_happy_10
+    21300022: Myhn_happy_11
+    21300024: Myhn_happy_12
+    21300026: Myhn_happy_13
+    21300028: Myhn_happy_14
+    21300030: Myhn_happy_15
+    21300032: Myhn_happy_16
+    21300034: Myhn_happy_17
+    21300036: Myhn_happy_18
+    21300038: Myhn_happy_19
+    21300040: Myhn_happy_20
+    21300042: Myhn_happy_21
+    21300044: Myhn_happy_22
+    21300046: Myhn_happy_23
+    21300048: Myhn_happy_24
+    21300050: Myhn_happy_25
+    21300052: Myhn_happy_26
+    21300054: Myhn_happy_27
+    21300056: Myhn_happy_28
+    21300058: Myhn_happy_29
+    21300060: Myhn_happy_30
+    21300062: Myhn_happy_31
+    21300064: Myhn_happy_32
+    21300066: Myhn_happy_33
+    21300068: Myhn_happy_34
+    21300070: Myhn_happy_35
+    21300072: Myhn_happy_36
+    21300074: Myhn_happy_37
+    21300076: Myhn_happy_38
+    21300078: Myhn_happy_39
+    21300080: Myhn_happy_40
+    21300082: Myhn_happy_41
+    21300084: Myhn_happy_42
+    21300086: Myhn_happy_43
+    21300088: Myhn_happy_44
+    21300090: Myhn_happy_45
+    21300092: Myhn_happy_46
+    21300094: Myhn_happy_47
+    21300096: Myhn_happy_48
+    21300098: Myhn_happy_49
+    21300100: Myhn_happy_50
+    21300102: Myhn_happy_51
+    21300104: Myhn_happy_52
+    21300106: Myhn_happy_53
+    21300108: Myhn_happy_54
+    21300110: Myhn_happy_55
+    21300112: Myhn_happy_56
+    21300114: Myhn_happy_57
+    21300116: Myhn_happy_58
+    21300118: Myhn_happy_59
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Myhn_happy_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2556
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_1
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 2556
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_2
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 2556
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_3
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 2556
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_4
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 2556
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_5
+      rect:
+        serializedVersion: 2
+        x: 1755
+        y: 2556
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_6
+      rect:
+        serializedVersion: 2
+        x: 2106
+        y: 2556
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_7
+      rect:
+        serializedVersion: 2
+        x: 2457
+        y: 2556
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_8
+      rect:
+        serializedVersion: 2
+        x: 2808
+        y: 2556
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_9
+      rect:
+        serializedVersion: 2
+        x: 3159
+        y: 2556
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2055
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_11
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 2055
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_12
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 2055
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_13
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 2055
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_14
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 2055
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_15
+      rect:
+        serializedVersion: 2
+        x: 1755
+        y: 2055
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_16
+      rect:
+        serializedVersion: 2
+        x: 2106
+        y: 2055
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_17
+      rect:
+        serializedVersion: 2
+        x: 2457
+        y: 2055
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_18
+      rect:
+        serializedVersion: 2
+        x: 2808
+        y: 2055
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_19
+      rect:
+        serializedVersion: 2
+        x: 3159
+        y: 2055
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1554
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_21
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 1554
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_22
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 1554
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_23
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 1554
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_24
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 1554
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_25
+      rect:
+        serializedVersion: 2
+        x: 1755
+        y: 1554
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_26
+      rect:
+        serializedVersion: 2
+        x: 2106
+        y: 1554
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_27
+      rect:
+        serializedVersion: 2
+        x: 2457
+        y: 1554
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_28
+      rect:
+        serializedVersion: 2
+        x: 2808
+        y: 1554
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_29
+      rect:
+        serializedVersion: 2
+        x: 3159
+        y: 1554
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1053
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_31
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 1053
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_32
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 1053
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_33
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 1053
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_34
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 1053
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_35
+      rect:
+        serializedVersion: 2
+        x: 1755
+        y: 1053
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_36
+      rect:
+        serializedVersion: 2
+        x: 2106
+        y: 1053
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_37
+      rect:
+        serializedVersion: 2
+        x: 2457
+        y: 1053
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_38
+      rect:
+        serializedVersion: 2
+        x: 2808
+        y: 1053
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_39
+      rect:
+        serializedVersion: 2
+        x: 3159
+        y: 1053
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 552
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_41
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 552
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_42
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 552
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_43
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 552
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_44
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 552
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_45
+      rect:
+        serializedVersion: 2
+        x: 1755
+        y: 552
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_46
+      rect:
+        serializedVersion: 2
+        x: 2106
+        y: 552
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_47
+      rect:
+        serializedVersion: 2
+        x: 2457
+        y: 552
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_48
+      rect:
+        serializedVersion: 2
+        x: 2808
+        y: 552
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_49
+      rect:
+        serializedVersion: 2
+        x: 3159
+        y: 552
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 51
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_51
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 51
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_52
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 51
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_53
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 51
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_54
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 51
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_55
+      rect:
+        serializedVersion: 2
+        x: 1755
+        y: 51
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_56
+      rect:
+        serializedVersion: 2
+        x: 2106
+        y: 51
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_57
+      rect:
+        serializedVersion: 2
+        x: 2457
+        y: 51
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_58
+      rect:
+        serializedVersion: 2
+        x: 2808
+        y: 51
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_happy_59
+      rect:
+        serializedVersion: 2
+        x: 3159
+        y: 51
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
