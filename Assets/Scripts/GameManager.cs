@@ -38,15 +38,7 @@ public class GameManager : MonoBehaviour
             PlayMessage("hello this is the end of the beginning have you tried my new however what if you didn't but yes in the home");
         if (Input.GetKeyDown("2"))
         {
-        }
-        if (Input.GetKeyDown("3"))
-        {
-        }
-        if (Input.GetKeyDown("4"))
-        {
-        }
-        if (Input.GetKeyDown("5"))
-        {
+            ShowEndScreen(2);
         }
         if (Input.GetKeyDown("6"))
         {
@@ -167,8 +159,10 @@ public class GameManager : MonoBehaviour
 
     public void ShowEndScreen(int index)
     {
+        GameObject.Find("UI").SetActive(false);
         ending = index;
         screenIndex = 3;
+        FindObjectOfType<MusicPlayer>().PlaySong("bgm_witchCraft");
     }
 
 
