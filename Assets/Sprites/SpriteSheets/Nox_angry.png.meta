@@ -1,0 +1,386 @@
+fileFormatVersion: 2
+guid: a1ed74fddee7407409df50af283ab546
+timeCreated: 1454227330
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Nox_angry_0
+    21300002: Nox_angry_1
+    21300004: Nox_angry_2
+    21300006: Nox_angry_3
+    21300008: Nox_angry_4
+    21300010: Nox_angry_5
+    21300012: Nox_angry_6
+    21300014: Nox_angry_7
+    21300016: Nox_angry_8
+    21300018: Nox_angry_9
+    21300020: Nox_angry_10
+    21300022: Nox_angry_11
+    21300024: Nox_angry_12
+    21300026: Nox_angry_13
+    21300028: Nox_angry_14
+    21300030: Nox_angry_15
+    21300032: Nox_angry_16
+    21300034: Nox_angry_17
+    21300036: Nox_angry_18
+    21300038: Nox_angry_19
+    21300040: Nox_angry_20
+    21300042: Nox_angry_21
+    21300044: Nox_angry_22
+    21300046: Nox_angry_23
+    21300048: Nox_angry_24
+    21300050: Nox_angry_25
+    21300052: Nox_angry_26
+    21300054: Nox_angry_27
+    21300056: Nox_angry_28
+    21300058: Nox_angry_29
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 8192
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Nox_angry_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1052
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Nox_angry_1
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 1052
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Nox_angry_2
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 1052
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Nox_angry_3
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 1052
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Nox_angry_4
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 1052
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Nox_angry_5
+      rect:
+        serializedVersion: 2
+        x: 1756
+        y: 1052
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Nox_angry_6
+      rect:
+        serializedVersion: 2
+        x: 2107
+        y: 1052
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Nox_angry_7
+      rect:
+        serializedVersion: 2
+        x: 2458
+        y: 1052
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Nox_angry_8
+      rect:
+        serializedVersion: 2
+        x: 2809
+        y: 1052
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Nox_angry_9
+      rect:
+        serializedVersion: 2
+        x: 3160
+        y: 1052
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Nox_angry_10
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 551
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Nox_angry_11
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 551
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Nox_angry_12
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 551
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Nox_angry_13
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 551
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Nox_angry_14
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 551
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Nox_angry_15
+      rect:
+        serializedVersion: 2
+        x: 1756
+        y: 551
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Nox_angry_16
+      rect:
+        serializedVersion: 2
+        x: 2107
+        y: 551
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Nox_angry_17
+      rect:
+        serializedVersion: 2
+        x: 2458
+        y: 551
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Nox_angry_18
+      rect:
+        serializedVersion: 2
+        x: 2809
+        y: 551
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Nox_angry_19
+      rect:
+        serializedVersion: 2
+        x: 3160
+        y: 551
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Nox_angry_20
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 50
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Nox_angry_21
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 50
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Nox_angry_22
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 50
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Nox_angry_23
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 50
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Nox_angry_24
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 50
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Nox_angry_25
+      rect:
+        serializedVersion: 2
+        x: 1756
+        y: 50
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Nox_angry_26
+      rect:
+        serializedVersion: 2
+        x: 2107
+        y: 50
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Nox_angry_27
+      rect:
+        serializedVersion: 2
+        x: 2458
+        y: 50
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Nox_angry_28
+      rect:
+        serializedVersion: 2
+        x: 2809
+        y: 50
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Nox_angry_29
+      rect:
+        serializedVersion: 2
+        x: 3160
+        y: 50
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

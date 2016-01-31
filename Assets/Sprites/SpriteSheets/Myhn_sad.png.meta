@@ -1,0 +1,716 @@
+fileFormatVersion: 2
+guid: 9da44ae8e66604241a1589abd5bb3b3a
+timeCreated: 1454227072
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Myhn_sad_0
+    21300002: Myhn_sad_1
+    21300004: Myhn_sad_2
+    21300006: Myhn_sad_3
+    21300008: Myhn_sad_4
+    21300010: Myhn_sad_5
+    21300012: Myhn_sad_6
+    21300014: Myhn_sad_7
+    21300016: Myhn_sad_8
+    21300018: Myhn_sad_9
+    21300020: Myhn_sad_10
+    21300022: Myhn_sad_11
+    21300024: Myhn_sad_12
+    21300026: Myhn_sad_13
+    21300028: Myhn_sad_14
+    21300030: Myhn_sad_15
+    21300032: Myhn_sad_16
+    21300034: Myhn_sad_17
+    21300036: Myhn_sad_18
+    21300038: Myhn_sad_19
+    21300040: Myhn_sad_20
+    21300042: Myhn_sad_21
+    21300044: Myhn_sad_22
+    21300046: Myhn_sad_23
+    21300048: Myhn_sad_24
+    21300050: Myhn_sad_25
+    21300052: Myhn_sad_26
+    21300054: Myhn_sad_27
+    21300056: Myhn_sad_28
+    21300058: Myhn_sad_29
+    21300060: Myhn_sad_30
+    21300062: Myhn_sad_31
+    21300064: Myhn_sad_32
+    21300066: Myhn_sad_33
+    21300068: Myhn_sad_34
+    21300070: Myhn_sad_35
+    21300072: Myhn_sad_36
+    21300074: Myhn_sad_37
+    21300076: Myhn_sad_38
+    21300078: Myhn_sad_39
+    21300080: Myhn_sad_40
+    21300082: Myhn_sad_41
+    21300084: Myhn_sad_42
+    21300086: Myhn_sad_43
+    21300088: Myhn_sad_44
+    21300090: Myhn_sad_45
+    21300092: Myhn_sad_46
+    21300094: Myhn_sad_47
+    21300096: Myhn_sad_48
+    21300098: Myhn_sad_49
+    21300100: Myhn_sad_50
+    21300102: Myhn_sad_51
+    21300104: Myhn_sad_52
+    21300106: Myhn_sad_53
+    21300108: Myhn_sad_54
+    21300110: Myhn_sad_55
+    21300112: Myhn_sad_56
+    21300114: Myhn_sad_57
+    21300116: Myhn_sad_58
+    21300118: Myhn_sad_59
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 8192
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Myhn_sad_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2555
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_1
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 2555
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_2
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 2555
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_3
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 2555
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_4
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 2555
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_5
+      rect:
+        serializedVersion: 2
+        x: 1756
+        y: 2555
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_6
+      rect:
+        serializedVersion: 2
+        x: 2107
+        y: 2555
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_7
+      rect:
+        serializedVersion: 2
+        x: 2458
+        y: 2555
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_8
+      rect:
+        serializedVersion: 2
+        x: 2809
+        y: 2555
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_9
+      rect:
+        serializedVersion: 2
+        x: 3160
+        y: 2555
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_10
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2054
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_11
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 2054
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_12
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 2054
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_13
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 2054
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_14
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 2054
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_15
+      rect:
+        serializedVersion: 2
+        x: 1756
+        y: 2054
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_16
+      rect:
+        serializedVersion: 2
+        x: 2107
+        y: 2054
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_17
+      rect:
+        serializedVersion: 2
+        x: 2458
+        y: 2054
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_18
+      rect:
+        serializedVersion: 2
+        x: 2809
+        y: 2054
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_19
+      rect:
+        serializedVersion: 2
+        x: 3160
+        y: 2054
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_20
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1553
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_21
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 1553
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_22
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 1553
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_23
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 1553
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_24
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 1553
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_25
+      rect:
+        serializedVersion: 2
+        x: 1756
+        y: 1553
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_26
+      rect:
+        serializedVersion: 2
+        x: 2107
+        y: 1553
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_27
+      rect:
+        serializedVersion: 2
+        x: 2458
+        y: 1553
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_28
+      rect:
+        serializedVersion: 2
+        x: 2809
+        y: 1553
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_29
+      rect:
+        serializedVersion: 2
+        x: 3160
+        y: 1553
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_30
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1052
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_31
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 1052
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_32
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 1052
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_33
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 1052
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_34
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 1052
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_35
+      rect:
+        serializedVersion: 2
+        x: 1756
+        y: 1052
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_36
+      rect:
+        serializedVersion: 2
+        x: 2107
+        y: 1052
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_37
+      rect:
+        serializedVersion: 2
+        x: 2458
+        y: 1052
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_38
+      rect:
+        serializedVersion: 2
+        x: 2809
+        y: 1052
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_39
+      rect:
+        serializedVersion: 2
+        x: 3160
+        y: 1052
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_40
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 551
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_41
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 551
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_42
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 551
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_43
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 551
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_44
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 551
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_45
+      rect:
+        serializedVersion: 2
+        x: 1756
+        y: 551
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_46
+      rect:
+        serializedVersion: 2
+        x: 2107
+        y: 551
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_47
+      rect:
+        serializedVersion: 2
+        x: 2458
+        y: 551
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_48
+      rect:
+        serializedVersion: 2
+        x: 2809
+        y: 551
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_49
+      rect:
+        serializedVersion: 2
+        x: 3160
+        y: 551
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_50
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 50
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_51
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 50
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_52
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 50
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_53
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 50
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_54
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 50
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_55
+      rect:
+        serializedVersion: 2
+        x: 1756
+        y: 50
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_56
+      rect:
+        serializedVersion: 2
+        x: 2107
+        y: 50
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_57
+      rect:
+        serializedVersion: 2
+        x: 2458
+        y: 50
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_58
+      rect:
+        serializedVersion: 2
+        x: 2809
+        y: 50
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Myhn_sad_59
+      rect:
+        serializedVersion: 2
+        x: 3160
+        y: 50
+        width: 350
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
