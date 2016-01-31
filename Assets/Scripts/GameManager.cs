@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public float yPos;
 
     public int screenIndex;
+    public int ending;
 
     List<GameObject> instAvatars;
     Queue<string> msgQueue;
@@ -166,20 +167,8 @@ public class GameManager : MonoBehaviour
 
     public void ShowEndScreen(int index)
     {
-        switch (index)
-        {
-            case 0:
-                
-                break;
-            case 1:
-                break;
-            case 2:
-                break;
-            case 3:
-                break;
-            default:
-                break;
-        }
+        ending = index;
+        screenIndex = 3;
     }
 
 

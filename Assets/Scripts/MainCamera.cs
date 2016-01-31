@@ -31,6 +31,10 @@ public class MainCamera : MonoBehaviour {
                 xPos = 0;
                 yPos = Mathf.Clamp(pPos.y, 16, 24);
                 break;
+            case 3:
+                xPos = 0;
+                yPos = 50 + gm.ending * 10;
+                break;
         }
         transform.position = new Vector3(xPos, yPos, transform.position.z);
 	}
