@@ -24,14 +24,14 @@ public class SummenerPortal : MonoBehaviour
         {
             // bad ending 2
         }
-        else if(16 + 4 + 8)
-        {
-            // good ending 1
-        }
-        else if(32 + 4 + 8)
-        {
-            // good ending 2
-        }
+        //else if(16 + 4 + 8)
+        //{
+        //    // good ending 1
+        //}
+        //else if(32 + 4 + 8)
+        //{
+        //    // good ending 2
+        //}
 
 
     }
