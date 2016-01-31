@@ -9,6 +9,7 @@ public class SummenerPortal : MonoBehaviour
 
     public void AddItemToSumeningPortal(int index)
     {
+        DialogueScript diag = FindObjectOfType<DialogueScript>();
         if (itemsAdded < 3)
         {
             itemsAdded++;
@@ -17,6 +18,7 @@ public class SummenerPortal : MonoBehaviour
                 return;
             if(19 == portalValue)
             {
+                //diag.nox
                 // bad ending 1
             }
             else if (35 == portalValue)
