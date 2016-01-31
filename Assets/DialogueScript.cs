@@ -149,4 +149,24 @@ public class DialogueScript : MonoBehaviour {
 		q.Enqueue("Myyn (neutral): Yep, see you Wednesday.");
 		gm.PlayMessage(q);
 	}
+
+	//[blue potion]
+	public void NoxBadEnd()
+	{
+		Queue<string> q = new Queue<string>();
+		q.Enqueue("ShowAvatar 1 400 Happy");
+		q.Enqueue("ShowAvatar 0 -400 Idle");
+		q.Enqueue("Myyn: Here’s the potion.");
+		q.Enqueue("Nox: Thank you so much! This will help me stop worrying about Wald.");
+		q.Enqueue("Myyn: No problem.");
+		q.Enqueue("Sneaking up on Wald’s toads, Nox carefully got the potion bottle out of their pocket. However, as soon as they opened the bottle an explosion of colourful fumes erupted from it and enveloped Nox completely.");
+		q.Enqueue("ShowAvatar 1 400 Angry");
+		q.Enqueue("Nox: Myyyyyyyyyn!!");
+		q.Enqueue("ShowAvatar 0 -400 Happy");
+		q.Enqueue("Myyn: Yes, Nox?");
+		q.Enqueue("Nox: It’s been an entire week and my nose STILL hasn’t stopped being runny from your stupid prank!");
+		q.Enqueue("ShowAvatar 0 -400 Idle");
+		q.Enqueue("Myyn (neutral): Well, maybe stop sticking it into things that aren’t your business, then. See you next Wednesday!");
+		gm.PlayMessage(q);
+	}
 }
