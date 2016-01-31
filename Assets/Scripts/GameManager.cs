@@ -12,10 +12,11 @@ public class GameManager : MonoBehaviour
     //public Vector3 posLeft, posRight;
     public float yPos;
 
+    public int screenIndex;
+
     List<GameObject> instAvatars;
     Queue<string> msgQueue;
     Player player;
-    GameObject curLeft, curRight;
 
     void Start()
     {
@@ -38,15 +39,12 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown("2"))
         {
             ShowAvatar(0, 500);
-            curLeft.GetComponent<Animator>().SetTrigger("Happy");
         }
         if (Input.GetKeyDown("3"))
         {
-            curLeft.GetComponent<Animator>().SetTrigger("Angry");
         }
         if (Input.GetKeyDown("4"))
         {
-            curLeft.GetComponent<Animator>().SetTrigger("Idle");
         }
         if (Input.GetKeyDown("5"))
         {
@@ -107,28 +105,24 @@ public class GameManager : MonoBehaviour
         Debug.Log("showing" + index);
         GameObject av = instAvatars[index];
         av.transform.localPosition = new Vector2(xPos, yPos);
-        curLeft = av;
         av.SetActive(true);
     }
 
-    public void HideAvatar(bool left)
+    public void HideAvatar(int index)
     {
         Debug.Log("hiding");
-        if (left)
-            curLeft.SetActive(false);
-        else
-            curRight.SetActive(false);
+        instAvatars[index].SetActive(false);
     }
 
     public void HideDialogue()
     {
-        dialogue.gameObject.SetActive(false);
+        player.state = Player.State.Moving;
         textBox.GetComponent<TextScroll>().finished = true;
         foreach (var av in instAvatars)
         {
             av.SetActive(false);
         }
-        player.state = Player.State.Moving;
+        dialogue.gameObject.SetActive(false);
     }
 
 
