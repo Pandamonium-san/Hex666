@@ -6,12 +6,12 @@ public class Player : MonoBehaviour
     public float WalkSpeed { get; set; }
     public float RunSpeed { get; set; }
 
-    public int Mushroom = 0;
-    public int Medallion = 0;
-    public int Bone = 0;
-    public int Flask = 0;
-    public int CatOneLight = 0;
-    public int CatTwoLight = 0;
+    public bool Mushroom = false;
+    public bool Medallion = false;
+    public bool Bone = false;
+    public bool Flask = false;
+    public bool CatOneLight = false;
+    public bool CatTwoLight = false;
 
     public enum State { Moving, Interacting }
     public State state = State.Moving;

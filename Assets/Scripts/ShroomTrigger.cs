@@ -7,7 +7,7 @@ public class ShroomTrigger : EventTrigger {
 
     public override void Trigger(Player player)
     {
-        ++player.Mushroom;
+        player.Mushroom = true;
         que.Enqueue("You found a mushroom!");
         que.Enqueue("Or did you?");
         que.Enqueue("...");

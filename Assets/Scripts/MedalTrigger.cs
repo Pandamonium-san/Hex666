@@ -4,7 +4,7 @@ using System.Collections;
 public class MedalTrigger : EventTrigger {
     public override void Trigger(Player player)
     {
-        ++player.Medallion;
+        player.Medallion = true;
         Destroy(gameObject);
     }
 }
