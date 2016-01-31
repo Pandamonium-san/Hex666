@@ -19,8 +19,6 @@ public class GameManager : MonoBehaviour
     List<GameObject> instAvatars;
     Queue<string> msgQueue;
 
-    public GameObject purple, green;
-
     void Start()
     {
         instAvatars = new List<GameObject>();
@@ -74,18 +72,6 @@ public class GameManager : MonoBehaviour
         {
             string[] split = message.Split();
             ShowEndScreen(int.Parse(split[1]));
-        }
-        else if(message.StartsWith("PurpleCandle"))
-        {
-            player.CatOneLight = true;
-            purple.SetActive(true);
-            PlayNextMessage();
-        }
-        else if (message.StartsWith("GreenCandle"))
-        {
-            player.CatTwoLight = true;
-            green.SetActive(true);
-            PlayNextMessage();
         }
         else
         {

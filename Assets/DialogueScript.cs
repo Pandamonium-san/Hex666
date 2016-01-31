@@ -61,8 +61,7 @@ public class DialogueScript : MonoBehaviour {
         q.Enqueue("ShowAvatar 2 400 Sad");
         q.Enqueue("Wald: I just want my toads to be happy…");
 		q.Enqueue("Wald: Here, have this candle, it can help you with your magic.");
-        q.Enqueue("PurpleCandle");
-        gm.PlayMessage(q);
+		gm.PlayMessage(q);
     }
     public void TalkingToNox()
     {
@@ -95,7 +94,6 @@ public class DialogueScript : MonoBehaviour {
         q.Enqueue("Myyn: Well, I was planning on doing something tonight anyway.");
         q.Enqueue("ShowAvatar 1 400 Happy");
         q.Enqueue("Nox: Thanks! Take this candle, I got some extra and I know you need them.");
-        q.Enqueue("GreenCandle");
         gm.PlayMessage(q);
     }
 
