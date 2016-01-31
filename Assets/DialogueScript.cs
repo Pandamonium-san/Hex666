@@ -60,7 +60,8 @@ public class DialogueScript : MonoBehaviour {
         q.Enqueue("Wald: You are a lifesaver!");
         q.Enqueue("ShowAvatar 2 400 Sad");
         q.Enqueue("Wald: I just want my toads to be happy…");
-        gm.PlayMessage(q);
+		q.Enqueue("Wald: Here, have this candle, it can help you with your magic.");
+		gm.PlayMessage(q);
     }
 
     //[green potion]
@@ -129,7 +130,7 @@ public class DialogueScript : MonoBehaviour {
         q.Enqueue("ShowAvatar 0 -400 Idle");
         q.Enqueue("Myyn: Well, I was planning on doing something tonight anyway.");
         q.Enqueue("ShowAvatar 1 400 Happy");
-        q.Enqueue("Nox: Thanks!");
+        q.Enqueue("Nox: Thanks! Take this candle, I got some extra and I know you need them.");
         gm.PlayMessage(q);
     }
 
