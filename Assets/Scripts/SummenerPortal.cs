@@ -38,6 +38,12 @@ public class SummenerPortal : MonoBehaviour
                 diag.NoxGoodEnd();
                 // good ending 2
             }
+            else if(itemsAdded <= 3)
+            {
+                FindObjectOfType<GameManager>().PlayMessage("You lose!");
+                Application.Quit();
+                // you lose
+            }
         }
     }
 
