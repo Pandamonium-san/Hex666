@@ -132,4 +132,21 @@ public class DialogueScript : MonoBehaviour {
         q.Enqueue("Nox: Thanks!");
         gm.PlayMessage(q);
     }
+
+	//[blue potion]
+	public void NoxGoodEnd()
+	{
+		Queue<string> q = new Queue<string>();
+		q.Enqueue("ShowAvatar 1 400 Happy");
+		q.Enqueue("ShowAvatar 0 -400 Idle");
+		q.Enqueue("Myyn: Here is the potion. Put it on the toads and they’ll lose their poison.");
+		q.Enqueue("Nox: Great! This will make me a lot less worried about Wald.");
+		q.Enqueue("ShowAvatar 0 -400 Happy");
+		q.Enqueue("Myyn: Sure, it will help me sleep easier, too.");
+		q.Enqueue("ShowAvatar 1 400 Idle");
+		q.Enqueue("Nox: Thank you, Myyn. I’ll see you Wednesday, as usual?");
+		q.Enqueue("ShowAvatar 0 -400 Idle");
+		q.Enqueue("Myyn (neutral): Yep, see you Wednesday.");
+		gm.PlayMessage(q);
+	}
 }
