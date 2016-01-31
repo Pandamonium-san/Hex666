@@ -2,9 +2,10 @@
 using System.Collections;
 
 public class MedalTrigger : EventTrigger {
+    public GameObject ButtonMedal;
     public override void Trigger(Player player)
     {
-        player.Medallion = true;
+        ButtonMedal.SetActive(true);
         Destroy(gameObject);
     }
 }

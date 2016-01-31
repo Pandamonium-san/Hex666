@@ -2,9 +2,10 @@
 using System.Collections;
 
 public class FlaskTrigger : EventTrigger {
+    public GameObject buttonFlask;
     public override void Trigger(Player player)
     {
-        player.Flask = true;
+        buttonFlask.SetActive(true);
         Destroy(gameObject);
     }
 }
