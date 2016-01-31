@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public float yPos;
 
     public int screenIndex;
+    public int ending;
 
     List<GameObject> instAvatars;
     Queue<string> msgQueue;
@@ -37,15 +38,7 @@ public class GameManager : MonoBehaviour
             PlayMessage("hello this is the end of the beginning have you tried my new however what if you didn't but yes in the home");
         if (Input.GetKeyDown("2"))
         {
-        }
-        if (Input.GetKeyDown("3"))
-        {
-        }
-        if (Input.GetKeyDown("4"))
-        {
-        }
-        if (Input.GetKeyDown("5"))
-        {
+            ShowEndScreen(2);
         }
         if (Input.GetKeyDown("6"))
         {
@@ -166,20 +159,10 @@ public class GameManager : MonoBehaviour
 
     public void ShowEndScreen(int index)
     {
-        switch (index)
-        {
-            case 0:
-                
-                break;
-            case 1:
-                break;
-            case 2:
-                break;
-            case 3:
-                break;
-            default:
-                break;
-        }
+        GameObject.Find("UI").SetActive(false);
+        ending = index;
+        screenIndex = 3;
+        FindObjectOfType<MusicPlayer>().PlaySong("bgm_witchCraft");
     }
 
 
