@@ -1,0 +1,118 @@
+fileFormatVersion: 2
+guid: 458851a26519d7f40837192169788dc7
+timeCreated: 1454221587
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: myhn_player_0
+    21300002: myhn_player_1
+    21300004: myhn_player_2
+    21300006: myhn_player_3
+    21300008: myhn_player_4
+    21300010: myhn_player_5
+    21300012: myhn_player_6
+    21300014: myhn_player_7
+    21300016: myhn_player_8
+    21300018: myhn_player_9
+    21300020: myhn_player_10
+    21300022: myhn_player_11
+    21300024: myhn_player_12
+    21300026: myhn_player_13
+    21300028: myhn_player_14
+    21300030: myhn_player_15
+    21300032: myhn_player_16
+    21300034: myhn_player_17
+    21300036: myhn_player_18
+    21300038: myhn_player_19
+    21300040: myhn_player_20
+    21300042: myhn_player_21
+    21300044: myhn_player_22
+    21300046: myhn_player_23
+    21300048: myhn_player_24
+    21300050: myhn_player_25
+    21300052: myhn_player_26
+    21300054: myhn_player_27
+    21300056: myhn_player_28
+    21300058: myhn_player_29
+    21300060: myhn_player_30
+    21300062: myhn_player_31
+    21300064: myhn_player_32
+    21300066: myhn_player_33
+    21300068: myhn_player_34
+    21300070: myhn_player_35
+    21300072: myhn_player_36
+    21300074: myhn_player_37
+    21300076: myhn_player_38
+    21300078: myhn_player_39
+    21300080: myhn_player_40
+    21300082: myhn_player_41
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 8192
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 200
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: myhn_player_0
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 53
+        width: 365
+        height: 430
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: myhn_player_1
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 53
+        width: 365
+        height: 430
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

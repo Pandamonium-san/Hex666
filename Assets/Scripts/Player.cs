@@ -13,15 +13,13 @@ public class Player : MonoBehaviour
     public int CatOneLight = 0;
     public int CatTwoLight = 0;
 
-    enum Dir { D, DR, R, U, UR }
-    Dir fDir = Dir.R;
-    bool flipHorizontal = false;
     public enum State { Moving, Interacting }
     public State state = State.Moving;
 
     BoxCollider2D boxCollider;
     new Rigidbody2D rigidbody2D;
     GameManager gm;
+    Animator animator;
 
     public Vector3 triggerDir;
     public float triggerDistance;
@@ -32,6 +30,7 @@ public class Player : MonoBehaviour
     {
         gm = FindObjectOfType<GameManager>();
         rigidbody2D = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         Speed = 500f;
     }
 
@@ -65,6 +64,11 @@ public class Player : MonoBehaviour
         {
             UpdateDirection(movement);
             triggerDir = movement.normalized;
+            animator.SetBool("Moving", true);
+        }
+        else
+        {
+            animator.SetBool("Moving", false);
         }
     }
 
@@ -92,23 +96,13 @@ public class Player : MonoBehaviour
     void UpdateDirection(Vector3 movement)
     {
         if (movement.x > 0)
-            flipHorizontal = false;
-        else if (movement.x < 0)
-            flipHorizontal = true;
-        else
         {
-            if (movement.y > 0)
-                fDir = Dir.U;
-            else if (movement.y < 0)
-                fDir = Dir.D;
-            else
-                fDir = Dir.R;
-            return;
+            transform.rotation = new Quaternion(0, 0, 0, 0);
         }
-        if (movement.y > 0)
-            fDir = Dir.UR;
-        else if (movement.y < 0)
-            fDir = Dir.DR;
+        else if (movement.x < 0)
+        {
+            transform.rotation = new Quaternion(0, 1, 0, 0);
+        }
     }
 
     void Examine()
