@@ -4,10 +4,10 @@ using System.Collections.Generic;
 
 public class ShroomTrigger : EventTrigger {
     Queue<string> que = new Queue<string>();
-
+    public GameObject ButtonShroom;
     public override void Trigger(Player player)
     {
-        player.Mushroom = true;
+        ButtonShroom.SetActive(true);
         que.Enqueue("You found a mushroom!");
         que.Enqueue("Or did you?");
         que.Enqueue("...");
