@@ -7,9 +7,11 @@ public class SummenerPortal : MonoBehaviour
     int portalValue = 0;
     int itemsAdded = 0;
 
+    bool playerIsInPortal = false;
+
     public void AddItemToSumeningPortal(int index)
     {
-        if (itemsAdded < 3)
+        if (playerIsInPortal && itemsAdded < 3)
         {
             itemsAdded++;
             portalValue += index;
@@ -36,18 +38,29 @@ public class SummenerPortal : MonoBehaviour
 
     public void DisableButton(GameObject button)
     {
-        if (itemsAdded > 3)
+        if (!playerIsInPortal || itemsAdded > 3)
             return;
         Destroy(button);
     }
 
     public void AddItemToProtal(Sprite sprite)
     {
+        if (!playerIsInPortal)
+            return;
         if (itemsAdded == 0)
             GameObject.Find("LeftItem").GetComponent<SpriteRenderer>().sprite = sprite;
         if (itemsAdded == 1)
             GameObject.Find("MidItem").GetComponent<SpriteRenderer>().sprite = sprite;
         if (itemsAdded == 2)
             GameObject.Find("RightItem").GetComponent<SpriteRenderer>().sprite = sprite;
+    }
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        playerIsInPortal = true;
+    }
+    
+    public void OnTriggerExit2D()
+    {
+        playerIsInPortal = false;
     }
 }
