@@ -63,43 +63,6 @@ public class DialogueScript : MonoBehaviour {
 		q.Enqueue("Wald: Here, have this candle, it can help you with your magic.");
 		gm.PlayMessage(q);
     }
-
-    //[green potion]
-    public void WaldGoodEnd()
-    {
-        Queue<string> q = new Queue<string>();
-        q.Enqueue("ShowAvatar 2 400 Idle");
-        q.Enqueue("ShowAvatar 0 -400 Happy");
-        q.Enqueue("Myyn: Here you are, Wald, this potion will make your toads feel better in no time.");
-        q.Enqueue("ShowAvatar 2 400 Happy");
-        q.Enqueue("Wald: Thank you, Myyn, I love you so much! I knew I could count on you!");
-        q.Enqueue("Myyn: No problem, I’m glad I could be of help.");
-        q.Enqueue("Wald: Now Mister Binky will be hopping around and singing again, I’m so glad!");
-        q.Enqueue("ShowAvatar 2 400 Sad");
-        q.Enqueue("Wald: Singing…");
-        q.Enqueue("ShowAvatar 0 -400 Idle");
-        q.Enqueue("Myyn: Did you say something?");
-        q.Enqueue("ShowAvatar 2 400 Idle");
-        q.Enqueue("Wald: No, nothing!");
-        gm.PlayMessage(q);
-    }
-
-    public void WaldBadEnd()
-    {
-        Queue<string> q = new Queue<string>();
-        
-        //[produces a yellow potion, makes the toad and anything it touches swell up as balloons and bounce around the room floating for a couple of hours]
-        q.Enqueue("ShowAvatar 2 400 Idle");
-        q.Enqueue("ShowAvatar 0 -400 Idle");
-        q.Enqueue("Myyn: Here, Wald, the potion for your toads.");
-        q.Enqueue("ShowAvatar 2 400 Happy");
-        q.Enqueue("Wald: Thank you, Myyn, oh, I can’t wait for Mister Binksy to feel better again, I’ll run give this potion to him right away!");
-        q.Enqueue("Myyn: Yes, do that.");
-        q.Enqueue("HideAvatar 0");
-        q.Enqueue("HideAvatar 2");
-        q.Enqueue("Thirty minutes later Wald’s room is filled of bloated toads flying around the room, bouncing gently off each other");
-    }
-
     public void TalkingToNox()
     {
         Queue<string> q = new Queue<string>();
@@ -134,6 +97,46 @@ public class DialogueScript : MonoBehaviour {
         gm.PlayMessage(q);
     }
 
+    //[green potion]
+    public void WaldGoodEnd()
+    {
+        Queue<string> q = new Queue<string>();
+        q.Enqueue("ShowAvatar 2 400 Idle");
+        q.Enqueue("ShowAvatar 0 -400 Happy");
+        q.Enqueue("Myyn: Here you are, Wald, this potion will make your toads feel better in no time.");
+        q.Enqueue("ShowAvatar 2 400 Happy");
+        q.Enqueue("Wald: Thank you, Myyn, I love you so much! I knew I could count on you!");
+        q.Enqueue("Myyn: No problem, I’m glad I could be of help.");
+        q.Enqueue("Wald: Now Mister Binky will be hopping around and singing again, I’m so glad!");
+        q.Enqueue("ShowAvatar 2 400 Sad");
+        q.Enqueue("Wald: Singing…");
+        q.Enqueue("ShowAvatar 0 -400 Idle");
+        q.Enqueue("Myyn: Did you say something?");
+        q.Enqueue("ShowAvatar 2 400 Idle");
+        q.Enqueue("Wald: No, nothing!");
+        q.Enqueue("ShowEndScreen 0");
+        gm.PlayMessage(q);
+    }
+
+
+    public void WaldBadEnd()
+    {
+        Queue<string> q = new Queue<string>();
+        
+        //[produces a yellow potion, makes the toad and anything it touches swell up as balloons and bounce around the room floating for a couple of hours]
+        q.Enqueue("ShowAvatar 2 400 Idle");
+        q.Enqueue("ShowAvatar 0 -400 Idle");
+        q.Enqueue("Myyn: Here, Wald, the potion for your toads.");
+        q.Enqueue("ShowAvatar 2 400 Happy");
+        q.Enqueue("Wald: Thank you, Myyn, oh, I can’t wait for Mister Binksy to feel better again, I’ll run give this potion to him right away!");
+        q.Enqueue("Myyn: Yes, do that.");
+        q.Enqueue("HideAvatar 0");
+        q.Enqueue("HideAvatar 2");
+        q.Enqueue("Thirty minutes later Wald’s room is filled of bloated toads flying around the room, bouncing gently off each other");
+        q.Enqueue("ShowEndScreen 1");
+        gm.PlayMessage(q);
+    }
+
 	//[blue potion]
 	public void NoxGoodEnd()
 	{
@@ -148,7 +151,8 @@ public class DialogueScript : MonoBehaviour {
 		q.Enqueue("Nox: Thank you, Myyn. I’ll see you Wednesday, as usual?");
 		q.Enqueue("ShowAvatar 0 -400 Idle");
 		q.Enqueue("Myyn (neutral): Yep, see you Wednesday.");
-		gm.PlayMessage(q);
+        q.Enqueue("ShowEndScreen 2");
+        gm.PlayMessage(q);
 	}
 
 	//[blue potion]
@@ -168,6 +172,7 @@ public class DialogueScript : MonoBehaviour {
 		q.Enqueue("Nox: It’s been an entire week and my nose STILL hasn’t stopped being runny from your stupid prank!");
 		q.Enqueue("ShowAvatar 0 -400 Idle");
 		q.Enqueue("Myyn (neutral): Well, maybe stop sticking it into things that aren’t your business, then. See you next Wednesday!");
-		gm.PlayMessage(q);
+        q.Enqueue("ShowEndScreen 3");
+        gm.PlayMessage(q);
 	}
 }

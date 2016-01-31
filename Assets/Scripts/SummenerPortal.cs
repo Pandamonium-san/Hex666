@@ -11,12 +11,8 @@ public class SummenerPortal : MonoBehaviour
 
     public void AddItemToSumeningPortal(int index)
     {
-<<<<<<< HEAD
         DialogueScript diag = FindObjectOfType<DialogueScript>();
-        if (itemsAdded < 3)
-=======
         if (playerIsInPortal && itemsAdded < 3)
->>>>>>> origin/master
         {
             itemsAdded++;
             portalValue += index;
@@ -24,19 +20,22 @@ public class SummenerPortal : MonoBehaviour
                 return;
             if(19 == portalValue)
             {
-                //diag.nox
+                diag.WaldBadEnd();
                 // bad ending 1
             }
             else if (35 == portalValue)
             {
+                diag.NoxBadEnd();
                 // bad ending 2
             }
             else if (28 == portalValue)
             {
+                diag.WaldGoodEnd();
                 // good ending 1
             }
             else if (44 == portalValue)
             {
+                diag.NoxGoodEnd();
                 // good ending 2
             }
         }

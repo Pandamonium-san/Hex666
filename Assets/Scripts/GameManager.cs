@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
     //public Vector3 posLeft, posRight;
     public float yPos;
 
-    public bool lastMessage;
     public int screenIndex;
 
     List<GameObject> instAvatars;
@@ -75,6 +74,11 @@ public class GameManager : MonoBehaviour
             string[] split = message.Split();
             HideAvatar(int.Parse(split[1]));
             PlayNextMessage();
+        }
+        else if (message.StartsWith("ShowEndScreen"))
+        {
+            string[] split = message.Split();
+            ShowEndScreen(int.Parse(split[1]));
         }
         else
         {
@@ -158,6 +162,24 @@ public class GameManager : MonoBehaviour
             av.SetActive(false);
         }
         dialogue.gameObject.SetActive(false);
+    }
+
+    public void ShowEndScreen(int index)
+    {
+        switch (index)
+        {
+            case 0:
+                
+                break;
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            default:
+                break;
+        }
     }
 
 
