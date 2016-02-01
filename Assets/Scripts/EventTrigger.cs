@@ -8,21 +8,19 @@ public class EventTrigger : MonoBehaviour {
     public List<string> dialogue;
     public bool destroyAfterTriggered;
     public bool requiresItem;
-    public int itemUsedToTrigger;
+    public int itemUsedToTrigger = -1;
     GameManager gm;
 
-    void Start()
+    protected virtual void Start()
     {
         gm = FindObjectOfType<GameManager>();
     }
 
     public virtual void Trigger()
     {
-        if (requiresItem)
-            return;
         if (clip)
             AudioSource.PlayClipAtPoint(clip, transform.position);
-        if (dialogue.Count > 0)
+        if (dialogue != null && dialogue.Count > 0)
         {
             Queue<string> q = new Queue<string>(dialogue);
             gm.PlayMessage(q);
@@ -33,8 +31,9 @@ public class EventTrigger : MonoBehaviour {
 
     public virtual bool Trigger(Item item)
     {
-        if (item.ID != itemUsedToTrigger)
+        if (itemUsedToTrigger != -1 && item.ID != itemUsedToTrigger)
         {
+            gm.PlayMessage("Nothing happened");
             return false;
         }
         if (clip)

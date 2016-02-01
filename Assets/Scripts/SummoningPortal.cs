@@ -1,115 +1,172 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class SummoningPortal : EventTrigger
 {
     public Vector2[] ingredientPositions;
-    int maxItems = 6;
-    int karma = 0;
-    int itemsAdded = 0;
-    bool playerIsInPortal = false;
+    public AudioClip placeSound;
+    [SerializeField]
+    Item catalyst;
 
-    void Start()
+    [SerializeField]
+    GameObject[] pickups;
+
+    [SerializeField]
+    Item[] items;
+
+    public int maxAttempts = 2;
+    int attempts = 0;
+    int ingredientCount = 0;
+    int karma = 0;
+
+    protected override void Start()
     {
+        items = new Item[5];
+        pickups = new GameObject[5];
+        base.Start();
+    }
+
+    public override void Trigger()
+    {
+        if(ingredientCount < 5 && catalyst == null)
+        {
+            DialogueScript.ExaminePortalNoIngsOrCata();
+        }
+        else if(catalyst == null)
+        {
+            DialogueScript.ExaminePortalNoCata();
+        }
+        else if(ingredientCount < 5)
+        {
+            DialogueScript.ExaminePortalNoIngs();
+        }
+        else
+        {
+            DialogueScript.ExaminePortalHasCataAndIngs();
+        }
     }
 
     public override bool Trigger(Item item)
     {
+        if (item.Name == "Flask")
+        {
+            return TryRitual();
+        }
         if (AddItemToCircle(item))
         {
-
             return true;
         }
         else
             return false;
-        //if (dialogue.Count > 0)
-        //{
-        //    Queue<string> q = new Queue<string>(dialogue);
-        //    gm.PlayMessage(q);
-        //}
+    }
+
+    bool TryRitual()
+    {
+        if (ingredientCount < 5 && catalyst == null)
+        {
+            DialogueScript.ExaminePortalNoIngsOrCata();
+            return false;
+        }
+        else if (catalyst == null)
+        {
+            DialogueScript.ExaminePortalNoCata();
+            return false;
+        }
+        else if (ingredientCount < 5)
+        {
+            DialogueScript.ExaminePortalNoIngs();
+            return false;
+        }
+        else
+        {
+            CreatePotion();
+            return true;
+        }
+    }
+
+    void CreatePotion()
+    {
+        karma = 0;
+        for (int i = 0; i < items.Length; i++)
+        {
+            karma += items[i].Karma;
+        }
+        if (catalyst.Name == "PurpleCandle" && karma >= 0)
+            DialogueScript.CreateBluePotion();
+        else if (catalyst.Name == "BlackHair" && karma < 0)
+            DialogueScript.CreateYellowPotion();
+        else if (catalyst.Name == "GreenCandle" && karma >= 0)
+            DialogueScript.CreateGreenPotion();
+        else if (catalyst.Name == "NoxHair" && karma < 0)
+            DialogueScript.CreateRedPotion();
+        else if (attempts >= 1)
+        {
+            DialogueScript.GameOver();
+        }
+        else
+        {
+            attempts += 1;
+            DialogueScript.PotionFailed();
+        }
     }
 
     bool AddItemToCircle(Item item)
     {
-        if (!item.IsIngredient || itemsAdded >= maxItems)
-            return false;
-        karma += item.Karma;
+        for (int i = 0; i < pickups.Length; i++)
+        {
+            switch (item.type)
+            {
+                case Item.Type.Ingredient:
+                    if (pickups[i] != null)
+                        continue;
+                    pickups[i] = CreateItemOnGround(item, i);
+                    return true;
+                case Item.Type.Potion:
+                    DialogueScript.PotionToPortal();
+                    return false;
+                case Item.Type.Catalyst:
+                    catalyst = item;
+                    CreateItemOnGround(item, i);
+                    if (item.Name == "BlackHair" || item.Name == "NoxHair")
+                        DialogueScript.HairToPortal();
+                    else if (item.Name == "PurpleCandle" || item.Name == "GreenCandle")
+                        DialogueScript.CandleToPortal();
+                    return true;
+            }
+        }
+
+        DialogueScript.PortalFull();
+        return false;
+    }
+
+    GameObject CreateItemOnGround(Item item, int pos)
+    {
+        //GameObject go = Instantiate(Resources.Load<GameObject>("Prefabs/Items/" + item.Name));
+        if (placeSound)
+            AudioSource.PlayClipAtPoint(placeSound, transform.position + new Vector3(0, 0, 10));
+
         GameObject go = new GameObject("Ingredient");
         SpriteRenderer spr = go.AddComponent<SpriteRenderer>();
         spr.sprite = Item.GetSprite(item.Name);
         spr.sortingOrder = -7;
         go.transform.parent = transform;
-        if (itemsAdded < ingredientPositions.Length)
-            go.transform.localPosition = ingredientPositions[itemsAdded++];
-        else
-            go.transform.localPosition = Vector3.zero;
-        return true;
-    }
-
-    public void AddItemToSummoningPortal(int index)
-    {
-        if (playerIsInPortal && itemsAdded < 3)
+        go.layer = 9;
+        if (item.type == Item.Type.Ingredient)
         {
-            itemsAdded++;
-            karma += index;
-            if (itemsAdded < 3)
-                return;
-            if (19 == karma)
-            {
-                DialogueScript.WaldBadEnd();
-                // bad ending 1
-            }
-            else if (35 == karma)
-            {
-                DialogueScript.NoxBadEnd();
-                // bad ending 2
-            }
-            else if (28 == karma)
-            {
-                DialogueScript.WaldGoodEnd();
-                // good ending 1
-            }
-            else if (44 == karma)
-            {
-                DialogueScript.NoxGoodEnd();
-                // good ending 2
-            }
-            else if (itemsAdded <= 3)
-            {
-                FindObjectOfType<GameManager>().PlayMessage("You lose!");
-                Application.Quit();
-                // you lose
-            }
+
+            items[pos] = item;
+            ++ingredientCount;
+            go.transform.localPosition = ingredientPositions[pos];
         }
-    }
-
-    public void DisableButton(GameObject button)
-    {
-        if (!playerIsInPortal || itemsAdded > 3)
-            return;
-        Destroy(button);
-    }
-
-    public void AddItemToProtal(Sprite sprite)
-    {
-        if (!playerIsInPortal)
-            return;
-        if (itemsAdded == 0)
-            GameObject.Find("LeftItem").GetComponent<SpriteRenderer>().sprite = sprite;
-        if (itemsAdded == 1)
-            GameObject.Find("MidItem").GetComponent<SpriteRenderer>().sprite = sprite;
-        if (itemsAdded == 2)
-            GameObject.Find("RightItem").GetComponent<SpriteRenderer>().sprite = sprite;
-    }
-
-    public void OnTriggerEnter2D(Collider2D other)
-    {
-        playerIsInPortal = true;
-    }
-
-    public void OnTriggerExit2D()
-    {
-        playerIsInPortal = false;
+        else if (item.type == Item.Type.Catalyst)
+            go.transform.localPosition = Vector3.zero;
+        //go.AddComponent<BoxCollider2D>().isTrigger = true;
+        //EventTrigger et = go.AddComponent<EventTrigger>();
+        //et.destroyAfterTriggered = true;
+        //et.dialogue = new List<string>();
+        //et.dialogue.Add("AddItem " + item.ID);
+        return go;
     }
 }

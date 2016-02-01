@@ -30,7 +30,7 @@ public class DialogueScript : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         gm.PlayMessage(intro);
     }
-
+    #region NoxWaldDialogue
     public static void TalkingToWald()
     {
         Queue<string> q = new Queue<string>();
@@ -62,7 +62,8 @@ public class DialogueScript : MonoBehaviour
         q.Enqueue("ShowAvatar 2 400 Sad");
         q.Enqueue("Wald: I just want my toads to be happy…");
         q.Enqueue("Wald: Here, have this candle, it can help you with your magic.");
-        q.Enqueue("PurpleCandle");
+        q.Enqueue("AddItem 10");
+        q.Enqueue("Obtained Purple Candle.");
         gm.PlayMessage(q);
     }
     public static void TalkingToNox()
@@ -90,16 +91,72 @@ public class DialogueScript : MonoBehaviour
         q.Enqueue("Nox: But this is just going to unnecessary lengths! Wald is just being stubborn!");
         q.Enqueue("ShowAvatar 1 400 Happy");
         q.Enqueue("Nox: Myyn! You could make a spell to make the toads not poisonous anymore!");
-        q.Enqueue("Nox: Messing with toads through magic disqualifies them from competitions, but it’s not like Wald was going to compete with them anyway, and they could be sold as house pets when Wald is done with the study.");
+        q.Enqueue("Nox: Messing with toads through magic disqualifies them from competitions, but it’s not like Wald was going to compete with them anyway, "); 
+        q.Enqueue("and they could be sold as house pets when Wald is done with the study.");
         q.Enqueue("Nox: Please, Myyn!");
         q.Enqueue("ShowAvatar 0 -400 Idle");
         q.Enqueue("Myyn: Well, I was planning on doing something tonight anyway.");
         q.Enqueue("ShowAvatar 1 400 Happy");
         q.Enqueue("Nox: Thanks! Take this candle, I got some extra and I know you need them.");
-        q.Enqueue("GreenCandle");
+        q.Enqueue("AddItem 11");
+        q.Enqueue("Obtained Green Candle.");
         gm.PlayMessage(q);
     }
+    public static void TalkingToNox1()
+    {
+        Queue<string> q = new Queue<string>();
+        q.Enqueue("ShowAvatar 1 400 Idle");
+        q.Enqueue("ShowAvatar 0 -400 Idle");
+        q.Enqueue("Nox: Did you need anything else?");
+        q.Enqueue("Myyn: I was just wondering if you had anything else that could help me out.");
+        q.Enqueue("Nox: What? That candle wasn't enough? Sorry, but I don't think I have anything useful.");
+        q.Enqueue("Myyn: Okay then. Thank you anyway.");
+        gm.PlayMessage(q);
+    }
+    public static void TalkingToNox2()
+    {
+        Queue<string> q = new Queue<string>();
+        q.Enqueue("ShowAvatar 1 400 Idle");
+        q.Enqueue("ShowAvatar 0 -400 Happy");
+        q.Enqueue("Myyn: Is there anything else going around?");
+        q.Enqueue("Nox: Hmm, now that you mention it, have you seen a note around here? I dropped it somewhere.");
+        q.Enqueue("ShowAvatar 0 -400 Sad");
+        q.Enqueue("Myyn: Oh, that's unfortunate. Was it important?");
+        q.Enqueue("Nox: I don't remember. That's what it was for. You know how I forget things sometimes. I just hope Wald doesn't find it");
+        q.Enqueue("ShowAvatar 0 -400 Idle");
+        q.Enqueue("Myyn: I'll be on the lookout for it.");
+        q.Enqueue("ShowAvatar 1 400 Happy");
+        q.Enqueue("Nox: Thanks, Myyn!");
+        gm.PlayMessage(q);
+    }
+    public static void TalkingToNox3NoNote()
+    {
+        Queue<string> q = new Queue<string>();
+        q.Enqueue("ShowAvatar 1 400 Idle");
+        q.Enqueue("ShowAvatar 0 -400 Idle");
+        q.Enqueue("Nox: Did you find it?");
+        q.Enqueue("Myyn: No, sorry.");
+        q.Enqueue("ShowAvatar 1 400 Angry");
+        q.Enqueue("Nox: I know it can't be that far away?");
+        gm.PlayMessage(q);
+    }
+    public static void TalkingToNox3Note()
+    {
+        Queue<string> q = new Queue<string>();
+        q.Enqueue("ShowAvatar 1 400 Idle");
+        q.Enqueue("ShowAvatar 0 -400 Happy");
+        q.Enqueue("Myyn: Hey! Is this yours?");
+        q.Enqueue("ShowAvatar 1 400 Happy");
+        q.Enqueue("Nox: Yeah! That's it! You really found it for me! Thanks a lot, Myyn.");
+        q.Enqueue("Nox: Let's see what it says...");
+        q.Enqueue("ShowAvatar 1 400 Angry");
+        q.Enqueue("Nox: You... didn't read it, did you?");
+        q.Enqueue("Nox: You... didn't read it, did you?");
 
+        gm.PlayMessage(q);
+    }
+    #endregion
+    #region Endings
     //[green potion]
     public static void WaldGoodEnd()
     {
@@ -120,7 +177,6 @@ public class DialogueScript : MonoBehaviour
         q.Enqueue("ShowEndScreen 0");
         gm.PlayMessage(q);
     }
-
 
     public static void WaldBadEnd()
     {
@@ -158,7 +214,7 @@ public class DialogueScript : MonoBehaviour
         gm.PlayMessage(q);
     }
 
-    //[blue potion]
+    //[red potion]
     public static void NoxBadEnd()
     {
         Queue<string> q = new Queue<string>();
@@ -174,8 +230,154 @@ public class DialogueScript : MonoBehaviour
         q.Enqueue("Myyn: Yes, Nox?");
         q.Enqueue("Nox: It’s been an entire week and my nose STILL hasn’t stopped being runny from your stupid prank!");
         q.Enqueue("ShowAvatar 0 -400 Idle");
-        q.Enqueue("Myyn (neutral): Well, maybe stop sticking it into things that aren’t your business, then. See you next Wednesday!");
+        q.Enqueue("Myyn: Well, maybe stop sticking it into things that aren’t your business, then. See you next Wednesday!");
         q.Enqueue("ShowEndScreen 3");
         gm.PlayMessage(q);
     }
+
+    public static void GameOver()
+    {
+        Queue<string> q = new Queue<string>();
+        q.Enqueue("ShowAvatar 0 -400 Sad");
+        q.Enqueue("something something ran out of time moon is not bright enough");
+        q.Enqueue("ShowEndScreen 4");
+        gm.PlayMessage(q);
+    }
+    #endregion
+    #region PortalHints
+    public static void PortalFull()
+    {
+        Queue<string> q = new Queue<string>();
+        q.Enqueue("There is no space to place this item.");
+        gm.PlayMessage(q);
+    }
+
+    public static void PotionToPortal()
+    {
+        Queue<string> q = new Queue<string>();
+        q.Enqueue("ShowAvatar 0 -400 Idle");
+        q.Enqueue("Myyn: I shouldn't use this potion in the ritual. I could give it to someone.");
+        gm.PlayMessage(q);
+    }
+
+    public static void HairToPortal()
+    {
+        Queue<string> q = new Queue<string>();
+        q.Enqueue("ShowAvatar 0 -400 Happy");
+        q.Enqueue("Myyn: Getting this hair catalyst wasn't easy. This is going to be fun... ");
+        gm.PlayMessage(q);
+    }
+
+    public static void CandleToPortal()
+    {
+        Queue<string> q = new Queue<string>();
+        q.Enqueue("ShowAvatar 0 -400 Happy");
+        q.Enqueue("Myyn: Good thing I got this magic candle as a catalyst. I hope it will make something helpful.");
+        gm.PlayMessage(q);
+    }
+
+    // INCOMPLETE DIALOGUE BELOW
+    public static void ExaminePortalNoIngsOrCata()
+    {
+        Debug.Log("twice");
+        Queue<string> q = new Queue<string>();
+        q.Enqueue("ShowAvatar 0 -400 Happy");
+        q.Enqueue("something something u need 5 ingredients and a catalyst something");
+        gm.PlayMessage(q);
+    }
+    public static void ExaminePortalNoIngs()
+    {
+        Queue<string> q = new Queue<string>();
+        q.Enqueue("ShowAvatar 0 -400 Happy");
+        q.Enqueue("u need 5 ingredients");
+        gm.PlayMessage(q);
+    }
+    public static void ExaminePortalNoCata()
+    {
+        Queue<string> q = new Queue<string>();
+        q.Enqueue("ShowAvatar 0 -400 Happy");
+        q.Enqueue("u need a catalyst");
+        gm.PlayMessage(q);
+    }
+    public static void ExaminePortalHasCataAndIngs()
+    {
+        Queue<string> q = new Queue<string>();
+        q.Enqueue("ShowAvatar 0 -400 Happy");
+        q.Enqueue("u need to start the ritual by using a flask to put the potion in");
+        gm.PlayMessage(q);
+    }
+    #endregion
+    #region CreatePotion
+    /// CREATE POTION DIALOGUE
+    /// <summary>
+    /// Wald good end
+    /// </summary>
+    public static void CreateBluePotion()
+    {
+        Queue<string> q = new Queue<string>();
+        q.Enqueue("ShowAvatar 0 -400 Happy");
+        q.Enqueue("something something give this to wald");
+        q.Enqueue("AddItem 14");
+        q.Enqueue("Obtained Blue Potion.");
+        gm.PlayMessage(q);
+    }
+    /// <summary>
+    /// Wald bad end
+    /// </summary>
+    public static void CreateYellowPotion()
+    {
+        Queue<string> q = new Queue<string>();
+        q.Enqueue("ShowAvatar 0 -400 Happy");
+        q.Enqueue("something something give this to wald");
+        q.Enqueue("AddItem 16");
+        q.Enqueue("Obtained Yellow Potion.");
+        gm.PlayMessage(q);
+    }
+    /// <summary>
+    /// Nox good end
+    /// </summary>
+    public static void CreateGreenPotion()
+    {
+        Queue<string> q = new Queue<string>();
+        q.Enqueue("ShowAvatar 0 -400 Happy");
+        q.Enqueue("something something give this to nox");
+        q.Enqueue("AddItem 15");
+        q.Enqueue("Obtained Green Potion.");
+        gm.PlayMessage(q);
+    }
+    /// <summary>
+    /// Nox bad end
+    /// </summary>
+    public static void CreateRedPotion()
+    {
+        Queue<string> q = new Queue<string>();
+        q.Enqueue("ShowAvatar 0 -400 Happy");
+        q.Enqueue("something something give this to nox");
+        q.Enqueue("AddItem 17");
+        q.Enqueue("Obtained Red Potion.");
+        gm.PlayMessage(q);
+    }
+
+    public static void PotionFailed()
+    {
+        Queue<string> q = new Queue<string>();
+        q.Enqueue("ShowAvatar 0 -400 Idle");
+        q.Enqueue("Myyn: Let's see...");
+        q.Enqueue("Myyn: This goes here, right?");
+        q.Enqueue("Myyn: Oh!");
+        q.Enqueue("Myyn: That wasn't supposed to happen.");
+        q.Enqueue("ShowAvatar 0 400 Sad");
+        q.Enqueue("Myyn: Hmm... This potion doesn't seem to be useful for anything. No point in keeping it.");
+        q.Enqueue("PlaySound water_4.ogg");
+        q.Enqueue("...");
+        q.Enqueue("AddItem 3");
+        q.Enqueue("Obtained flask.");
+        q.Enqueue("Myyn: I wonder if I have time to make something else...");
+        q.Enqueue("ShowAvatar 0 400 Happy");
+        q.Enqueue("Myyn: The moon is still shining brightly.");
+        q.Enqueue("Myyn: If I hurry up I might be able to make one more attempt.");
+        q.Enqueue("Myyn: Let's see what else I can make!");
+        gm.PlayMessage(q);
+    }
+    #endregion
 }

@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     public State state = State.Moving;
 
     public Inventory inventory;
+    public AudioClip inventoryOpen, inventoryClose;
     new Rigidbody2D rigidbody2D;
     GameManager gm;
     Animator animator;
@@ -36,14 +37,14 @@ public class Player : MonoBehaviour
         {
             case State.Moving:
                 Movement();
-                if (Input.GetKeyUp("z"))
+                if (Input.GetKeyDown("z"))
                     Examine();
                 if (Input.GetKeyUp("x"))
                     OpenInventory();
                 break;
             case State.Interacting:
                 rigidbody2D.velocity = Vector2.zero;
-                if (Input.GetKeyUp("z") || Input.GetKeyDown("x"))
+                if (Input.GetKeyDown("z") || Input.GetKey("x"))
                     gm.PlayNextMessage();
                 break;
             case State.Inventory:
@@ -55,10 +56,16 @@ public class Player : MonoBehaviour
     }
     void OpenInventory()
     {
+        if (inventoryOpen)
+            AudioSource.PlayClipAtPoint(inventoryOpen, Camera.main.transform.position + new Vector3(0,0,-5));
+        inventory.ShowHighlight(true);
         state = State.Inventory;
     }
     void ExitInventory()
     {
+        if (inventoryClose)
+            AudioSource.PlayClipAtPoint(inventoryClose, transform.position);
+        inventory.ShowHighlight(false);
         state = State.Moving;
     }
     void InventoryControls()
@@ -75,21 +82,27 @@ public class Player : MonoBehaviour
 
     void UseItem()
     {
-        RaycastHit2D hit = Physics2D.BoxCast(transform.position + (Vector3)triggerOffset, triggerDistance, 0, Vector2.zero, 1, 1 << 9);
-        if (hit.collider != null)
+        RaycastHit2D[] hit = Physics2D.BoxCastAll(transform.position + (Vector3)triggerOffset, triggerDistance, 0, Vector2.zero, 1, 1 << 9);
+        if (hit == null || hit.Length == 0)
         {
-            Debug.Log(hit.collider.name);
-            EventTrigger et = hit.transform.GetComponent<EventTrigger>();
             ExitInventory();
-            if (et.Trigger(inventory.SelectedItem))
-                inventory.RemoveSelectedItem();
-            else
-                gm.PlayMessage("Nothing happened.");
+            gm.PlayMessage("Nothing happened");
+            return;
         }
-        else
+
+        for (int i = 0; i < hit.Length; i++)
         {
-            ExitInventory();
-            gm.PlayMessage("Nothing happened.");
+            if (hit[i].collider != null)
+            {
+                //Debug.Log(hit.collider.name);
+                EventTrigger et = hit[i].transform.GetComponent<EventTrigger>();
+                if (et != null && et.Trigger(inventory.SelectedItem))
+                {
+                    inventory.RemoveSelectedItem();
+                    ExitInventory();
+                    return;
+                }
+            }
         }
     }
 
@@ -148,7 +161,7 @@ public class Player : MonoBehaviour
         RaycastHit2D hit = Physics2D.BoxCast(transform.position + (Vector3)triggerOffset, triggerDistance, 0, Vector2.zero, 1, 1 << 9);
         if (hit.collider != null)
         {
-            Debug.Log(hit.collider.name);
+            //Debug.Log(hit.collider.name);
             EventTrigger et = hit.transform.GetComponent<EventTrigger>();
             et.Trigger();
         }

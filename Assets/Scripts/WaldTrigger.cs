@@ -11,4 +11,9 @@ public class WaldTrigger : EventTrigger {
             TalkingToWald = true;
         }
     }
+
+    public override bool Trigger(Item item)
+    {
+        return false;
+    }
 }

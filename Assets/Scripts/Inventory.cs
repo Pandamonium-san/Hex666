@@ -10,11 +10,14 @@ public class Inventory : MonoBehaviour
     [SerializeField]
     private List<InventorySlot> slots;
 
-    SpriteRenderer spr;
-
     void Start()
     {
         slots = new List<InventorySlot>();
+    }
+
+    public void ShowHighlight(bool show)
+    {
+        transform.FindChild("Selected").gameObject.SetActive(show);
     }
 
     public void ScrollForward()
@@ -67,7 +70,6 @@ public class Inventory : MonoBehaviour
 
     public void RemoveSelectedItem()
     {
-        Debug.Log("removing item");
         InventorySlot removed = slots[selectedIndex];
         slots.RemoveAt(selectedIndex);
         Destroy(removed.gameObject);

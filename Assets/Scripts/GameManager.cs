@@ -51,17 +51,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void AddItem(int ID)
-    {
-        Item item = Item.GetItem(ID);
-        if (item != null)
-        {
-            inventory.AddSlot(item);
-        }
-        else
-            Debug.Log("Error: Item with ID " + ID + " was not found.");
-    }
-
     public void ShowMessage(string message)
     {
         dialogue.gameObject.SetActive(true);
@@ -89,6 +78,11 @@ public class GameManager : MonoBehaviour
             string[] split = message.Split();
             ShowEndScreen(int.Parse(split[1]));
         }
+        else if (message.StartsWith("PlaySound"))
+        {
+            string[] split = message.Split();
+            PlaySound(split[1]);
+        }
         else
         {
             TextScroll txScr = textBox.GetComponent<TextScroll>();
@@ -97,6 +91,26 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void DialogueTree(string message, string choice1, string choice2)
+    {
+
+    }
+
+    public void AddItem(int ID)
+    {
+        Item item = Item.GetItem(ID);
+        if (item != null)
+        {
+            inventory.AddSlot(item);
+        }
+        else
+            Debug.Log("Error: Item with ID " + ID + " was not found.");
+    }
+
+    public void PlaySound(string name)
+    {
+        AudioSource.PlayClipAtPoint(Resources.Load<AudioClip>("SFX/" + name), Camera.main.transform.position);
+    }
     /// <summary>
     /// Shows a single message.
     /// </summary>
@@ -175,6 +189,8 @@ public class GameManager : MonoBehaviour
         ending = index;
         screenIndex = 3;
         FindObjectOfType<MusicPlayer>().PlaySong("bgm_witchCraft");
+        if (index == 5)
+            FindObjectOfType<MusicPlayer>().PlaySong("bgm_citymusic");
     }
 
 
