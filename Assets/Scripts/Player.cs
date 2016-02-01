@@ -1,33 +1,28 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Player : MonoBehaviour
 {
     public float WalkSpeed { get; set; }
     public float RunSpeed { get; set; }
 
-    public bool Mushroom = false;
-    public bool Medallion = false;
-    public bool Bone = false;
-    public bool Flask = false;
-    public bool CatOneLight = false;
-    public bool CatTwoLight = false;
-
-    public enum State { Moving, Interacting }
+    public enum State { Moving, Interacting, Inventory }
     public State state = State.Moving;
 
-    BoxCollider2D boxCollider;
+    public Inventory inventory;
     new Rigidbody2D rigidbody2D;
     GameManager gm;
     Animator animator;
 
-    public Vector3 triggerDir;
-    public float triggerDistance;
+    public Vector2 triggerOffset;
+    public Vector2 triggerDistance;
     float Speed;
 
     // Use this for initialization
     void Start()
     {
+        inventory = FindObjectOfType<Inventory>();
         gm = FindObjectOfType<GameManager>();
         rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -41,16 +36,60 @@ public class Player : MonoBehaviour
         {
             case State.Moving:
                 Movement();
-                if (Input.GetKeyUp("e"))
+                if (Input.GetKeyUp("z"))
                     Examine();
+                if (Input.GetKeyUp("x"))
+                    OpenInventory();
                 break;
             case State.Interacting:
                 rigidbody2D.velocity = Vector2.zero;
-                if (Input.GetKeyUp("e"))
+                if (Input.GetKeyUp("z") || Input.GetKeyDown("x"))
                     gm.PlayNextMessage();
+                break;
+            case State.Inventory:
+                InventoryControls();
                 break;
             default:
                 break;
+        }
+    }
+    void OpenInventory()
+    {
+        state = State.Inventory;
+    }
+    void ExitInventory()
+    {
+        state = State.Moving;
+    }
+    void InventoryControls()
+    {
+        if (Input.GetKeyUp("z"))
+            UseItem();
+        if (Input.GetKeyUp("x"))
+            ExitInventory();
+        if (Input.GetKeyUp("left"))
+            inventory.ScrollBack();
+        if (Input.GetKeyUp("right"))
+            inventory.ScrollForward();
+    }
+
+    void UseItem()
+    {
+        RaycastHit2D hit = Physics2D.BoxCast(transform.position + (Vector3)triggerOffset, triggerDistance, 0, Vector2.zero, 1, 1 << 9);
+        if (hit.collider != null)
+        {
+            Debug.Log(hit.collider.name);
+            EventTrigger et = hit.transform.GetComponent<EventTrigger>();
+            ExitInventory();
+            if (et.Trigger(inventory.SelectedItem))
+                inventory.RemoveSelectedItem();
+            else
+                gm.PlayMessage("Nothing happened.");
+        }
+        else
+        {
+            ExitInventory();
+            gm.PlayMessage("Nothing happened.");
         }
     }
 
@@ -63,7 +102,6 @@ public class Player : MonoBehaviour
         if (movement != Vector3.zero)
         {
             UpdateDirection(movement);
-            triggerDir = movement.normalized;
             animator.SetBool("Moving", true);
         }
         else
@@ -107,13 +145,12 @@ public class Player : MonoBehaviour
 
     void Examine()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, triggerDir, triggerDistance, 1 << 9);
-        Debug.Log("examine");
+        RaycastHit2D hit = Physics2D.BoxCast(transform.position + (Vector3)triggerOffset, triggerDistance, 0, Vector2.zero, 1, 1 << 9);
         if (hit.collider != null)
         {
             Debug.Log(hit.collider.name);
             EventTrigger et = hit.transform.GetComponent<EventTrigger>();
-            et.Trigger(this);
+            et.Trigger();
         }
 
     }

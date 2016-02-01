@@ -5,12 +5,11 @@ using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
-    public Player player;
+
     public Canvas canvas;
     public Transform dialogue;
     public Text textBox;
     public List<GameObject> avatars;
-    //public Vector3 posLeft, posRight;
     public float yPos;
 
     public int screenIndex;
@@ -19,10 +18,14 @@ public class GameManager : MonoBehaviour
     List<GameObject> instAvatars;
     Queue<string> msgQueue;
 
-    public GameObject purple, green;
+    Player player;
+    Inventory inventory;
 
     void Start()
     {
+        Item.InitializeItemDB();
+        player = FindObjectOfType<Player>();
+        inventory = FindObjectOfType<Inventory>();
         instAvatars = new List<GameObject>();
         foreach (GameObject av in avatars)
         {
@@ -48,16 +51,21 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void AddItem(int ID)
+    {
+        Item item = Item.GetItem(ID);
+        if (item != null)
+        {
+            inventory.AddSlot(item);
+        }
+        else
+            Debug.Log("Error: Item with ID " + ID + " was not found.");
+    }
+
     public void ShowMessage(string message)
     {
         dialogue.gameObject.SetActive(true);
         player.state = Player.State.Interacting;
-        TextScroll txScr = textBox.GetComponent<TextScroll>();
-        if (!txScr.finished)
-        {
-            Debug.Log("Error: Message sent before previous finished");
-            return;
-        }
         if (message.StartsWith("ShowAvatar"))
         {
             string[] split = message.Split();
@@ -70,25 +78,20 @@ public class GameManager : MonoBehaviour
             HideAvatar(int.Parse(split[1]));
             PlayNextMessage();
         }
+        else if (message.StartsWith("AddItem"))
+        {
+            string[] split = message.Split();
+            AddItem(int.Parse(split[1]));
+            PlayNextMessage();
+        }
         else if (message.StartsWith("ShowEndScreen"))
         {
             string[] split = message.Split();
             ShowEndScreen(int.Parse(split[1]));
         }
-        else if(message.StartsWith("PurpleCandle"))
-        {
-            player.CatOneLight = true;
-            purple.SetActive(true);
-            PlayNextMessage();
-        }
-        else if (message.StartsWith("GreenCandle"))
-        {
-            player.CatTwoLight = true;
-            green.SetActive(true);
-            PlayNextMessage();
-        }
         else
         {
+            TextScroll txScr = textBox.GetComponent<TextScroll>();
             textBox.text = message;
             txScr.StartTextScroll();
         }
@@ -131,12 +134,9 @@ public class GameManager : MonoBehaviour
         if (msgQueue.Count <= 0)
         {
             HideDialogue();
+            return;
         }
         ShowMessage(msgQueue.Dequeue());
-    }
-
-    public void NextMessage()
-    {
     }
 
     /// <summary>
@@ -147,7 +147,6 @@ public class GameManager : MonoBehaviour
     /// <param name="mood">Myyn(Happy,Sad,Angry,Idle), Nox(Happy,Angry,Idle), Wald(Happy,Sad,Idle)</param>
     public void ShowAvatar(int index, float xPos, string mood)
     {
-        Debug.Log("showing" + index);
         GameObject av = instAvatars[index];
         av.transform.localPosition = new Vector2(xPos, yPos);
         av.GetComponent<Animator>().SetTrigger(mood);
@@ -156,7 +155,6 @@ public class GameManager : MonoBehaviour
 
     public void HideAvatar(int index)
     {
-        Debug.Log("hiding");
         instAvatars[index].SetActive(false);
     }
 
