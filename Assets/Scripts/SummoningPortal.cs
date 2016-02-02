@@ -7,11 +7,14 @@ public class SummoningPortal : EventTrigger
 {
     public Vector2[] ingredientPositions;
     public AudioClip placeSound;
-    [SerializeField]
-    Item catalyst;
 
     [SerializeField]
+    GameObject pickupCata;
+    [SerializeField]
     GameObject[] pickups;
+
+    [SerializeField]
+    Item catalyst;
 
     [SerializeField]
     Item[] items;
@@ -30,6 +33,7 @@ public class SummoningPortal : EventTrigger
 
     public override void Trigger()
     {
+        Debug.Log("triggered portal");
         if(ingredientCount < 5 && catalyst == null)
         {
             DialogueScript.ExaminePortalNoIngsOrCata();
@@ -54,12 +58,7 @@ public class SummoningPortal : EventTrigger
         {
             return TryRitual();
         }
-        if (AddItemToCircle(item))
-        {
-            return true;
-        }
-        else
-            return false;
+        return AddItemToCircle(item);
     }
 
     bool TryRitual()
@@ -92,7 +91,9 @@ public class SummoningPortal : EventTrigger
         for (int i = 0; i < items.Length; i++)
         {
             karma += items[i].Karma;
+            Destroy(pickups[i]);
         }
+        Destroy(pickupCata);
         if (catalyst.Name == "PurpleCandle" && karma >= 0)
             DialogueScript.CreateBluePotion();
         else if (catalyst.Name == "BlackHair" && karma < 0)
@@ -123,10 +124,15 @@ public class SummoningPortal : EventTrigger
                         continue;
                     pickups[i] = CreateItemOnGround(item, i);
                     return true;
-                case Item.Type.Potion:
-                    DialogueScript.PotionToPortal();
+                case Item.Type.Key:
+                    DialogueScript.KeyItemToPortal();
                     return false;
                 case Item.Type.Catalyst:
+                    if (pickupCata)
+                    {
+                        DialogueScript.CataExists();
+                        return false;
+                    }
                     catalyst = item;
                     CreateItemOnGround(item, i);
                     if (item.Name == "BlackHair" || item.Name == "NoxHair")
@@ -136,7 +142,6 @@ public class SummoningPortal : EventTrigger
                     return true;
             }
         }
-
         DialogueScript.PortalFull();
         return false;
     }
@@ -155,13 +160,15 @@ public class SummoningPortal : EventTrigger
         go.layer = 9;
         if (item.type == Item.Type.Ingredient)
         {
-
             items[pos] = item;
             ++ingredientCount;
             go.transform.localPosition = ingredientPositions[pos];
         }
         else if (item.type == Item.Type.Catalyst)
+        {
             go.transform.localPosition = Vector3.zero;
+            pickupCata = go;
+        }
         //go.AddComponent<BoxCollider2D>().isTrigger = true;
         //EventTrigger et = go.AddComponent<EventTrigger>();
         //et.destroyAfterTriggered = true;

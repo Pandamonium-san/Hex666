@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
     Player player;
     Inventory inventory;
 
+    public bool MessageExists { get; private set; }
+
     void Start()
     {
         Item.InitializeItemDB();
@@ -53,8 +55,9 @@ public class GameManager : MonoBehaviour
 
     public void ShowMessage(string message)
     {
+        MessageExists = true;
         dialogue.gameObject.SetActive(true);
-        player.state = Player.State.Interacting;
+        player.SetState(Player.State.Interacting);
         if (message.StartsWith("ShowAvatar"))
         {
             string[] split = message.Split();
@@ -91,17 +94,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void DialogueTree(string message, string choice1, string choice2)
-    {
-
-    }
-
     public void AddItem(int ID)
     {
         Item item = Item.GetItem(ID);
         if (item != null)
         {
             inventory.AddSlot(item);
+            Debug.Log("Added " + item.Name);
         }
         else
             Debug.Log("Error: Item with ID " + ID + " was not found.");
@@ -117,7 +116,7 @@ public class GameManager : MonoBehaviour
     public void PlayMessage(string message)
     {
         dialogue.gameObject.SetActive(true);
-        player.state = Player.State.Interacting;
+        player.SetState(Player.State.Interacting);
 
         msgQueue.Enqueue(message);
 
@@ -129,8 +128,12 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void PlayMessage(Queue<string> messages)
     {
+        if (MessageExists)
+        {
+            Debug.Log("Queue overwritten");
+        }
         dialogue.gameObject.SetActive(true);
-        player.state = Player.State.Interacting;
+        player.SetState(Player.State.Interacting);
 
         msgQueue = messages;
 
@@ -152,7 +155,6 @@ public class GameManager : MonoBehaviour
         }
         ShowMessage(msgQueue.Dequeue());
     }
-
     /// <summary>
     /// Shows avatar above dialogue box.
     /// </summary>
@@ -163,7 +165,8 @@ public class GameManager : MonoBehaviour
     {
         GameObject av = instAvatars[index];
         av.transform.localPosition = new Vector2(xPos, yPos);
-        av.GetComponent<Animator>().SetTrigger(mood);
+        Animator anim = av.GetComponent<Animator>();
+        anim.SetTrigger(mood);
         av.SetActive(true);
     }
 
@@ -174,13 +177,14 @@ public class GameManager : MonoBehaviour
 
     public void HideDialogue()
     {
-        player.state = Player.State.Moving;
+        player.SetState(Player.State.Moving);
         textBox.GetComponent<TextScroll>().finished = true;
         foreach (var av in instAvatars)
         {
             av.SetActive(false);
         }
         dialogue.gameObject.SetActive(false);
+        MessageExists = false;
     }
 
     public void ShowEndScreen(int index)

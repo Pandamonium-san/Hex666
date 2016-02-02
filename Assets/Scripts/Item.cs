@@ -9,7 +9,7 @@ public class Item
     public string Name { get; private set; }
     public int Karma { get; private set; }
 
-    public enum Type { Ingredient, Potion, Catalyst }
+    public enum Type { Ingredient, Key, Catalyst }
     public Type type { get; set; }
 
     public Item(int ID, string Name, int Karma, Type type)
@@ -74,10 +74,11 @@ public class Item
         AddItemToDB(12, "BlackHair", 0, Type.Catalyst);
         AddItemToDB(13, "NoxHair", 0, Type.Catalyst);
 
-        AddItemToDB(14, "BluePotion", 0, Type.Potion);
-        AddItemToDB(15, "GreenPotion", 0, Type.Potion);
-        AddItemToDB(16, "YellowPotion", 0, Type.Potion);
-        AddItemToDB(17, "RedPotion", 0, Type.Potion);
+        AddItemToDB(14, "BluePotion", 0, Type.Key);
+        AddItemToDB(15, "GreenPotion", 0, Type.Key);
+        AddItemToDB(16, "YellowPotion", 0, Type.Key);
+        AddItemToDB(17, "RedPotion", 0, Type.Key);
+        AddItemToDB(18, "Note2", 0, Type.Key);
     }
 
     static void InitializeSprites()

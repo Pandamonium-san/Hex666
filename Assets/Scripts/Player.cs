@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     public float RunSpeed { get; set; }
 
     public enum State { Moving, Interacting, Inventory }
-    public State state = State.Moving;
+    State state = State.Moving;
 
     public Inventory inventory;
     public AudioClip inventoryOpen, inventoryClose;
@@ -20,7 +20,6 @@ public class Player : MonoBehaviour
     public Vector2 triggerDistance;
     float Speed;
 
-    // Use this for initialization
     void Start()
     {
         inventory = FindObjectOfType<Inventory>();
@@ -30,7 +29,6 @@ public class Player : MonoBehaviour
         Speed = 500f;
     }
 
-    // Update is called once per frame
     void Update()
     {
         switch (state)
@@ -39,11 +37,12 @@ public class Player : MonoBehaviour
                 Movement();
                 if (Input.GetKeyDown("z"))
                     Examine();
-                if (Input.GetKeyUp("x"))
+                if (Input.GetKeyDown("x"))
                     OpenInventory();
                 break;
             case State.Interacting:
                 rigidbody2D.velocity = Vector2.zero;
+                animator.SetBool("Moving", false);
                 if (Input.GetKeyDown("z") || Input.GetKey("x"))
                     gm.PlayNextMessage();
                 break;
@@ -54,54 +53,63 @@ public class Player : MonoBehaviour
                 break;
         }
     }
+
+    public void SetState(State state)
+    {
+        rigidbody2D.velocity = Vector2.zero;
+        animator.SetBool("Moving", false);
+        this.state = state;
+    }
+
     void OpenInventory()
     {
+        rigidbody2D.velocity = Vector2.zero;
+        animator.SetBool("Moving", false);
         if (inventoryOpen)
-            AudioSource.PlayClipAtPoint(inventoryOpen, Camera.main.transform.position + new Vector3(0,0,-5));
+            AudioSource.PlayClipAtPoint(inventoryOpen, Camera.main.transform.position + new Vector3(0, 0, -5));
         inventory.ShowHighlight(true);
-        state = State.Inventory;
+        SetState(State.Inventory);
     }
     void ExitInventory()
     {
+        SetState(State.Moving);
         if (inventoryClose)
             AudioSource.PlayClipAtPoint(inventoryClose, transform.position);
         inventory.ShowHighlight(false);
-        state = State.Moving;
     }
     void InventoryControls()
     {
-        if (Input.GetKeyUp("z"))
+        if (Input.GetKeyDown("z"))
             UseItem();
-        if (Input.GetKeyUp("x"))
+        if (Input.GetKeyDown("x"))
             ExitInventory();
-        if (Input.GetKeyUp("left"))
+        if (Input.GetKeyDown("left"))
             inventory.ScrollBack();
-        if (Input.GetKeyUp("right"))
+        if (Input.GetKeyDown("right"))
             inventory.ScrollForward();
     }
 
     void UseItem()
     {
+        ExitInventory();
         RaycastHit2D[] hit = Physics2D.BoxCastAll(transform.position + (Vector3)triggerOffset, triggerDistance, 0, Vector2.zero, 1, 1 << 9);
         if (hit == null || hit.Length == 0)
         {
-            ExitInventory();
             gm.PlayMessage("Nothing happened");
             return;
         }
 
         for (int i = 0; i < hit.Length; i++)
         {
-            if (hit[i].collider != null)
+            EventTrigger et = hit[i].transform.GetComponent<EventTrigger>();
+            if (et != null && et.Trigger(inventory.SelectedItem))
             {
-                //Debug.Log(hit.collider.name);
-                EventTrigger et = hit[i].transform.GetComponent<EventTrigger>();
-                if (et != null && et.Trigger(inventory.SelectedItem))
-                {
-                    inventory.RemoveSelectedItem();
-                    ExitInventory();
-                    return;
-                }
+                inventory.RemoveSelectedItem();
+                return;
+            }
+            else if (!gm.MessageExists)
+            {
+                gm.PlayMessage("Nothing happened");
             }
         }
     }
