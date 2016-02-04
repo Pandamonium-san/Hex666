@@ -285,7 +285,7 @@ public class DialogueScript : MonoBehaviour
         q.Enqueue("Nox: Thank you, Myyn. I’ll see you Wednesday, as usual?");
         q.Enqueue("ShowAvatar 0 -400 Idle");
         q.Enqueue("Myyn (neutral): Yep, see you Wednesday.");
-        q.Enqueue("ShowEndScreen 1");
+        q.Enqueue("ShowEndScreen 3");
         gm.PlayMessage(q);
     }  //green potion
     public static void NoxBadEnd()      //red potion
@@ -304,7 +304,7 @@ public class DialogueScript : MonoBehaviour
         q.Enqueue("Nox: It’s been an entire week and my nose STILL hasn’t stopped being runny from your stupid prank!");
         q.Enqueue("ShowAvatar 0 -400 Idle");
         q.Enqueue("Myyn: Well, maybe stop sticking it into things that aren’t your business, then. See you next Wednesday!");
-        q.Enqueue("ShowEndScreen 4");
+        q.Enqueue("ShowEndScreen 0");
         gm.PlayMessage(q);
     }
     #endregion
@@ -377,7 +377,7 @@ public class DialogueScript : MonoBehaviour
         q.Enqueue("HideAvatar 0");
         q.Enqueue("HideAvatar 2");
         q.Enqueue("Thirty minutes later Wald’s room is filled of bloated toads flying around the room, bouncing gently off each other");
-        q.Enqueue("ShowEndScreen 3");
+        q.Enqueue("ShowEndScreen 1");
         gm.PlayMessage(q);
     }   //yellow potion
     #endregion
